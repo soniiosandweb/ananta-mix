@@ -45,7 +45,7 @@
     color: var(--color-old-brown);
     text-decoration: unset;
     font-size: 15px;
-    font-family: var(--font-semibold);
+    font-family: "Poppins";
     font-weight: 900;
     display: flex;
     gap: 2px;
@@ -55,10 +55,9 @@
     color: var(--color-black);
 }
 .header_right .header_call img {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
-    filter: invert(1);
 }
 .header_offcanvas .navbar-nav {
     justify-content: center;

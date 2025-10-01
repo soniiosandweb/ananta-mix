@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import EnquireForm from '../EnquireForm/EnquireForm';
 // import ScrollToSection from "../../../ScrollLink";
-// import phoneIcon from "../../../assests/images/phone-call.png";
+import phoneIcon from "../../../assests/images/phone.png";
 import menuIcon from "../../../assests/images/menus.png";
 import { Container, Navbar, Nav, Offcanvas, Button } from "react-bootstrap";
 import { Dialog } from "@mui/material";
@@ -217,7 +217,7 @@ console.log(id,'click')
                         <div className="header_right">
                             <div className="header_right_top">
                                 <Link to={"tel:+918609000900"} className="header_call">
-                                    {/* <img src={phoneIcon} alt="Phone" className="phone_icon" /> */}
+                                    <img src={phoneIcon} alt="Phone" className="phone_icon" />
                                     +91 8609000900
                                 </Link>
                                 <Button className="header_request_btn" onClick={handleOpen}>Request Details</Button>
@@ -267,7 +267,7 @@ console.log(id,'click')
                       <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
                     </div>
                   </Dialog>
-                  <div className={` side-popup-form ${showsidePopup ? 'flex' : 'hidden'} border-4 border-primary-brown `}>
+                  <div className={` side-popup-form ${showsidePopup ? 'flex' : 'hidden'} border-3 border-primary-brown `}>
                     <div className="flex justify-end btn-icon">
                       <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
                     </div>

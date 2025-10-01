@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const MetaData = ({title, description, canonicalUrl}) => {
+const MetaData = ({title, description, canonicalUrl, localSchema}) => {
     return(
         <Helmet>
             <title>{title}</title>
@@ -15,6 +15,11 @@ const MetaData = ({title, description, canonicalUrl}) => {
             {canonicalUrl &&
                 <link rel="canonical" href={canonicalUrl ? canonicalUrl : process.env.REACT_APP_API_URL } />
             }
+            {localSchema &&
+                    <script type="application/ld+json">
+                        {JSON.stringify(localSchema)}
+                    </script>
+                }
             
         </Helmet>
     )

@@ -134,9 +134,9 @@
     }
     .banner_slider_item .booking_text_banner {
         min-width: 157px;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 27px;
-        padding: 10px;
+        padding: 6px 10px;
     }
     .banner_slider_item .banner_small_image {
         flex: 0 0 350px;
@@ -165,12 +165,13 @@
         min-height: auto;
     }
     .banner_slider_heading {
-        font-size: 25px;
-        line-height: 25px;
+        font-size: 20px;
+        line-height: 20px;
     }
     .banner_slider_subtext {
-        font-size: 18px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 10px 0;
     }
     .banner_slider_red_text {
         font-size: 16px;
