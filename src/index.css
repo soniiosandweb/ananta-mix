@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TT Norms";
+  src: url('./assests/font/TTNorms-Regular.otf');
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url('./assests/font/rubik.woff2');
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  position: relative;
+  font-family: 'TT Norms', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cookie-banner{
+  top: 0 !important;
+  bottom: 0;
+  left: 0 !important;
+  right: 0 !important;
+  max-width: 35%;
+  height: fit-content;
+  margin: auto;
+}
+@media(max-width: 1200px){
+  .cookie-banner{
+    max-width: 50%;
+  }
+}
+@media(max-width: 767px){
+  .cookie-banner{
+    max-width: 90%;
+  }
+}
+code {
+  font-family: 'Helvetica', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica', sans-serif;
+}
+.font-norms{
+  font-family: 'TT Norms', sans-serif;
+}
+
+.font-rubik{
+  font-family: "Rubik";
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+}
+.primary-bg{
+  background-color: #f7f7f7;
+}
+.primary-brown{
+  background-color: #8F6445;
+}
+:focus-visible{
+  outline: unset;
+}
+/* Lightbox */
+.yarl__container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.single-lightbox .yarl__button.yarl__navigation_prev,
+.single-lightbox .yarl__button.yarl__navigation_next {
+  display: none;
+}
+
+.aminities-group:hover .animate-wobble{
+  animation-name: animation-wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes animation-wobble-horizontal {
+  16.65% {
+    transform: translateX(8px);
+  }
+  33.3% {
+      transform: translateX(-6px);
+  }
+  49.95% {
+      transform: translateX(4px);
+  }
+  66.6% {
+      transform: translateX(-2px);
+  }
+  83.25% {
+      transform: translateX(1px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+.p-5 {
+    padding: 1.25rem !important;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url('./assests/font/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url('./assests/font/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url('./assests/font/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url('./assests/font/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "Mono-Dance";
+  src: url('./assests/font/MoonDance-Regular.ttf');
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-orange: #FF4400;
+  --color-red: #FF0000;
+  --color-btn-bg: #F2EEEE;
+  --color-gray: #555050;
+  --color-brown: #421F12;
+  --color-old-brown: #8f6445;
+  --color-border: #B7B7B7;
+  --color-transparent: transparent;
+  --color-header-bg: #ffffffdb;
+  /* --font-semibold: "Poppins-SemiBold";
+  --font-bold: "Poppins-Bold";
+  --font-medium: "Poppins-Medium";
+  --font-regular: "Poppins"; */
+  --bs-border-width: 0;
+  --bs-border-radius-lg: 8px;
+}
+
+.padding-top {
+  padding-top: 4rem;
+}
+.padding-bottom {
+  padding-bottom: 4rem;
+}
+@media (max-width: 767px) {
+  .padding-top {
+    padding-top: 3rem;
+  }
+  .padding-bottom {
+    padding-bottom: 3rem;
+  }
+}

@@ -1,0 +1,21 @@
+#smartliving{
+    background-image: url('../../../assests/images/smart-living-bg.webp');
+    background-position: center center;
+    background-size: cover;
+}
+.smart-living-items{
+    min-height: 200px;
+}
+.smart-living-items::before{
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: all .3s ease-out;
+}
+.smart-living-items:hover::before {
+    top: 0;
+}

@@ -1,0 +1,25 @@
+.list-sections li::after {
+    content: "";
+    width: 3px;
+    height: 22px;
+    background-color: #8F6445;
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+}
+.list-sections li:last-child::after {
+    display: none;
+}
+@media (max-width: 480px){
+    .list-sections{
+        flex-direction: column;
+    }
+    .list-sections li::after {
+        height: 3px;
+        width: 50px;
+        margin: 5px auto;
+        position: relative;
+        left: 0;
+    }
+}

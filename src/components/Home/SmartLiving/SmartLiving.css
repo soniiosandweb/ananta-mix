@@ -1,0 +1,181 @@
+.smart_living_section {
+    background-color: var(--color-brown);
+    position: relative;
+    margin-bottom: 200px;
+    padding: 5rem 0;
+}
+.smart_living_section .smart_living_section_bg {
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.smart_living_section .container {
+    position: relative;
+}
+.smart_living_flex {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+.smart_living_flex .smart_living_col {
+    max-width: 486px;
+    flex: 0 0 486px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.smart_living_heading {
+    font-size: 45px;
+    line-height: 47px;
+    color: var(--color-white);
+    font-weight: 500;
+    margin: 0;
+}
+.smart_living_flex .smart_living_col .paragraph {
+    font-size: 16px;
+    color: var(--color-white);
+}
+.smart_living_flex .smart_living_img {
+    border-radius: 0 0 200px 200px;
+    width: 100%;
+    max-width: 486px;
+    margin-bottom: -250px;
+}
+.smart_living_flex .smart_living_img.bottom_mobile_img {
+    display: none;
+}
+.smart_living_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.smart_living_list_item {
+    border: 1px solid #FFFFFF7A;
+    min-height: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+.smart_living_list_item.active,
+.smart_living_list_item:hover {
+    background-color: #FFA95E7A;
+}
+.smart_living_box_text {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.smart_living_box_title {
+    font-size: 100px;
+    margin: 0;
+    line-height: 105px;
+    font-family: "Mono-Dance";
+    color: transparent; 
+    -webkit-text-stroke: 2px var(--color-white); 
+    text-stroke: 2px var(--color-white); 
+}
+.smart_living_list_item.active .smart_living_box_title,
+.smart_living_list_item:hover .smart_living_box_title {
+     -webkit-text-stroke: 2px #FFA767; 
+    text-stroke: 2px #FFA767;
+}
+.feature-description {
+    grid-column: span 2;
+    padding: 1rem 0;
+    max-width: 345px;
+}
+.description_title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--color-white);
+}
+.description_content {
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--color-white);
+    
+    margin-top: 1rem;
+}
+@media (max-width: 1199px) {
+    .smart_living_flex {
+        gap: 2rem;
+    }
+    .smart_living_flex .smart_living_col {
+        max-width: 400px;
+        flex: 0 0 400px;
+    }
+}
+@media (max-width: 991px) {
+    .smart_living_box_title {
+        font-size: 75px;
+        line-height: 80px;
+    }
+    .smart_living_box_text {
+        font-size: 16px;
+    }
+    .smart_living_list_item {
+        min-height: 150px;
+    }
+    .description_title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .description_content {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .smart_living_flex {
+        gap: 1rem;
+    }
+    .smart_living_flex .smart_living_col {
+        max-width: 300px;
+        flex: 0 0 300px;
+    }
+}
+@media (max-width: 767px) {
+    .smart_living_flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .smart_living_flex .smart_living_col,
+    .smart_living_col_right {
+        max-width: 90%;
+        flex: 1;
+    }
+    .smart_living_flex .smart_living_img {
+        display: none;
+    }
+    .smart_living_flex .smart_living_img.bottom_mobile_img {
+        display: block;
+        max-width: 321px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 575px) {
+    .smart_living_flex .smart_living_col,
+    .smart_living_col_right {
+        max-width: 100%;
+        flex: 1;
+    }
+}
+@media (max-width: 480px) {
+    .smart_living_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .feature-description {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,160 @@
+.pulso-animation {
+    animation: pulso 2s infinite;
+    transition: .5s;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255, 255, 255, .4);
+    padding: 1px;
+}
+
+@keyframes pulso {
+    0% {
+        -moz-box-shadow: 0 0 0 0 #14be47;
+        box-shadow: 0 0 0 0 #14be47;
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.scroll.home-header {
+    background-color: transparent;
+    height: 0;
+}
+
+.scroll.home-header .header-nav-link {
+    color: #fff;
+}
+
+.scroll.home-header .header-logo {
+    filter: brightness(0) invert(1);
+}
+
+.popup-form .enquire-form {
+    padding-top: 0;
+}
+
+
+.blink {
+    animation: vertical-shaking 1s infinite;
+    -webkit-animation: vertical-shaking 1s infinite;
+}
+
+@keyframes vertical-shaking {
+    0% {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(5px)
+    }
+
+    50% {
+        transform: translateY(-5px)
+    }
+
+    75% {
+        transform: translateY(5px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+
+/* form */
+.side-popup-form {
+    position: fixed;
+    height: fit-content;
+    right: 30px;
+    transform: translateY(-40%);
+    top: 46%;
+    z-index: 100;
+    max-width: 370px;
+    background: #fff;
+    padding:  20px;
+    box-shadow: 0 0 5px 2px #00000029;
+    z-index: 99999999;
+    width: 100%;
+}
+
+.side-popup-form .btn-icon {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    box-shadow: 0 0 5px 2px #00000029;
+    background: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media(max-width: 450px) {
+    .side-popup-form {
+        max-width: 90%;                
+        left: 50%;                     
+        top: 50%;                     
+        transform: translate(-50%, -50%); 
+        right: auto;                   
+    }
+}
+
+.side-popup-form form.enquire-form {
+    padding-top: 5px;
+    width: 100%;
+}
+
+.side-popup-form form.enquire-form .form-section {
+    height: 100%;
+}
+
+.side-popup-form form.enquire-form .form-section #enquiry-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+
+
+.hamberger {
+    align-self: flex-start;
+}
+
+
+@media (max-width: 430px) {
+    .hamberger {
+        padding: 4px 5px;
+    }
+
+    .enquire-btn {
+        padding: 7px;
+    }
+
+}
+
+
+@media (max-width: 639px) {
+  
+    .pre-rera {
+        gap: 4px;
+    }
+}
+
+.MuiDialog-root.form_popup {
+    z-index: 99999999;
+}
+
+
