@@ -1,0 +1,27 @@
+.contact_us_section .contact_us_flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.contact_us_left_col {
+    flex: 0 0 465px;
+    max-width: 465px;
+}
+.contact_us_content {
+    background-image: url("../../../assests/images/contact_us.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 727px;
+    border: 7px solid var(--color-brown);
+    border-radius: 250px;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+.contact_us_content .contact_us_content_text {
+    
+}
+.contact_us_right_col {
+    width: 100%;
+    flex: 1;
+}

@@ -1,0 +1,123 @@
+.project_connectivity_section {
+    background-color: var(--color-black);
+    position: relative;
+}
+.project_connectivity_section .connectivity_section_bg {
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.project_connectivity_section .container {
+    position: relative;
+}
+.project_connectivity_section .main_heading {
+    border-bottom: none;
+}
+.project_connectivity_section .location_map {
+    margin: 3rem 0;
+    text-align: center;
+}
+.project_connectivity_section .location_map .location_map_img {
+    max-width: 100%;
+    margin: auto;
+}
+.connectivity_accordion {
+    --bs-accordion-bg: var(--color-transparent);
+    color: var(--color-white);
+    --bs-accordion-btn-active-icon: url("../../../assests/images/connectivity/down.png");
+    --bs-accordion-btn-icon: url("../../../assests/images/connectivity/down.png");
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.connectivity_accordion .accordion-button {
+    background-color: var(--color-transparent);
+    color: var(--color-white);
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 0;
+    box-shadow: unset;
+}
+.connectivity_accordion .accordion-button::before {
+    content: "";
+    height: 1px;
+    width: calc(100% - 50px);
+    background-color: var(--color-white);
+    position: absolute;
+    bottom: 0;
+}
+.connectivity_accordion .accordion-button::after {
+    margin-bottom: -26px;
+    margin-top: auto;
+    width: 34px;
+    height: 34px;
+    background-size: 34px;
+}
+.connectivity_accordion .accordion-body {
+    padding: 20px 0;
+}
+.connectivity_data_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+.connectivity_data_item {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    color: var(--color-white);
+}
+.connectivity_data_item .connectivity_data_icon {
+    font-size: 40px;
+}
+.connectivity_data_item .connectivity_data_title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.connectivity_data_item::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-white);
+    position: absolute;
+    right: -1rem;
+}
+.connectivity_data_item:last-child::after{
+    display: none;
+}
+@media (max-width: 991px) {
+    .connectivity_data_item .connectivity_data_title {
+        font-size: 16px;
+    }
+    .connectivity_data_item .connectivity_data_icon {
+        font-size: 30px;
+    }
+    .connectivity_accordion .accordion-button {
+        font-size: 20px;
+    }
+    .connectivity_data_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .connectivity_data_item:nth-child(3)::after{
+        display: none;
+    }
+}
+@media (max-width: 575px) {
+    .connectivity_data_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .connectivity_data_item:nth-child(2n)::after{
+        display: none;
+    }
+     .connectivity_data_item:nth-child(3)::after{
+        display: block;
+    }
+}
+@media (max-width: 420px) {
+    .connectivity_data_item .connectivity_data_icon {
+        font-size: 20px;
+    }
+}

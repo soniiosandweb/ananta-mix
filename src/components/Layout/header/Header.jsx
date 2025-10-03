@@ -159,7 +159,7 @@ console.log(id,'click')
         <>
             <div className={`main_header ${scrollClass} ${locationValue[1] === "" ||  menuLists.some(item => item.id === locationValue[1]) ? "home_header" : ""}`}>
                 <Navbar key={"lg"} expand={"lg"}>
-                    <Container >
+                    <Container fluid>
                         <Navbar.Brand href="/">
                             <img src={logo} alt="Ananta Aspire Logo" className="logo_header" />
                         </Navbar.Brand>
@@ -175,36 +175,33 @@ console.log(id,'click')
                             <Offcanvas.Header closeButton></Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="flex-grow-1">
-                                    {/* {menuLists.map((menu,i) => (
-                                        <Nav.Link
-                                            as="span"
-                                            key={i}
-                                            onClick={handleClose}
-                                        >
-                                            <ScrollToSection to={menu.id}>{menu.title}</ScrollToSection>
-                                        </Nav.Link>
-                                    ))} */}
 
                                     {locationValue[1] === "" ?
                                     
                                         menuLists.map((item, i) => (
                                             
-                                            <Nav.Link
-                                                href={item.redirect}
+                                            <Link
+                                                to={item.redirect}
                                                 key={i}
                                                 onClick={(e) => handleMenuClick(e)}
                                                 smooth="true" 
                                                 data-id={item.id}
-                                            >{item.title}</Nav.Link>
+                                                className="nav-link"
+                                            >
+                                                {item.title}
+                                            </Link>
                                         ))
                                                     :
                                         menuLists.map((item, i) => (
-                                            <Nav.Link
-                                                href={item.redirect}
+                                            <Link
+                                                to={item.redirect}
                                                 key={i}
                                                 onClick={handleClose}
                                                 smooth="true" 
-                                            >{item.title}</Nav.Link>
+                                                className="nav-link"
+                                            >
+                                                {item.title}
+                                            </Link>
                                             
                                         ))
                                     

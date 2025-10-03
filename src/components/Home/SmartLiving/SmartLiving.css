@@ -65,6 +65,9 @@
     color: var(--color-white);
     cursor: pointer;
 }
+.smart_living_list_item:last-child {
+    height: max-content;
+}
 .smart_living_list_item.active,
 .smart_living_list_item:hover {
     background-color: #FFA95E7A;
@@ -149,7 +152,7 @@
     }
     .smart_living_flex .smart_living_col,
     .smart_living_col_right {
-        max-width: 90%;
+        max-width: 100%;
         flex: 1;
     }
     .smart_living_flex .smart_living_img {

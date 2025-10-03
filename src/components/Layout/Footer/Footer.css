@@ -9,3 +9,20 @@
 .text-brown {
     color: rgb(143 100 69);
 }
+@media (max-width: 767px) {
+    .footer_main .footer_logo {
+        margin: auto;
+    }
+    .footer_main .footer-text {
+        text-align: center;
+    }
+    .footer_menu_block .footer-text {
+        width: 100%;
+    }
+    .footer_menu_block .footer_menus {
+        margin: auto;
+    }
+    .footer_main .footer_social_blocks {
+        justify-content: center;
+    }
+}

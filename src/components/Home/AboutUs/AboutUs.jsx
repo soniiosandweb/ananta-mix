@@ -12,7 +12,7 @@ const aboutLists = [
 
 const AboutUs = () => {
     return (
-        <div className="about_us_section padding-top" id="about">
+        <div className="about_us_section padding-top" id="aboutus">
             <Container>
                 <Row>
                     <Col>

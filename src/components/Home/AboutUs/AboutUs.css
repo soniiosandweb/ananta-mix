@@ -34,6 +34,7 @@
 }
 .about_us_flex_div .about_us_left {
     flex: 1;
+    width: 100%;
 }
 .about_us_right_content {
     flex: 0 0 477px;

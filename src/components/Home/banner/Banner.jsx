@@ -16,7 +16,7 @@ import { useState } from "react";
 
 const slides = [
     {
-        title: "Families Have Mooved In, Happieness Has Begun",
+        title: "Families Have Moved In, Happiness Has Begun",
         text: "A new Chapter Begins, Possession Handed over, Families are now Calling it Home",
         subtext: "Move in Today | Be Part Of Our Growing Community",
         image: banner1,
@@ -66,6 +66,7 @@ const listsItem = [
     "3 BHK Apartments",
     "3+1 BHK Apartments",
     "4+1 BHK Apartments",
+    "Pent House/Duplex",
 ]
 
 const Banner = () => {
@@ -73,7 +74,7 @@ const Banner = () => {
     const [activeSlide, setActiveSlide] = useState(0);
 
     const settings = {
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
         dots: false,
         infinite: true,
@@ -92,7 +93,7 @@ const Banner = () => {
                 {slides.map((item,i) => (
                     <div className="banner_slider_item padding-top padding-bottom" key={i}>
                         <img src={item.image} alt={item.imageAlt} className="banner_bg_image" />
-                        <Container>
+                        <Container fluid>
                             <Row>
                                 <Col>
                                     <div className="banner_sliders_flex">
@@ -117,9 +118,9 @@ const Banner = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="banner_small_image">
+                                        {/* <div className="banner_small_image">
                                             <img src={item.smallImg} alt={item.smallAlt} className="banner_small_img" />
-                                        </div>
+                                        </div> */}
                                         
                                     </div>
                                 </Col>

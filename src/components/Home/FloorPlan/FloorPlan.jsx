@@ -1,97 +1,214 @@
-import floorPlan1 from '../../../assests/images/floorplan/3-BHK-1830-Sq.-feet.jpeg';
-import floorPlan2 from '../../../assests/images/floorplan/3-BHK-1830-Sq.-feet.jpeg';
-import floorPlan3 from '../../../assests/images/floorplan/41-BHK-2900-sq-feet.jpeg';
-import { useState } from "react";
+import "./FloorPlan.css";
+import { Button, Col, Container, Nav, Row, Tab } from "react-bootstrap";
+import floor1 from "../../../assests/images/floorplan/4bhk+1.png";
+import floor2 from "../../../assests/images/floorplan/3bhk+1.png";
+import floor3 from "../../../assests/images/floorplan/3bhk.png";
+import floor4 from "../../../assests/images/floorplan/pent-house.png";
 import Lightbox from "yet-another-react-lightbox";
 import { Fullscreen, Zoom } from "yet-another-react-lightbox/plugins";
+import { useState } from "react";
+import { Dialog } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import openIcon from "../../../assests/images/open-icon.png";
+import EnquireForm from "../../Layout/EnquireForm/EnquireForm";
 
 const FloorPlan = () => {
+
     const [openPlan1, setOpenPlan1] = useState(false);
     const [openPlan2, setOpenPlan2] = useState(false);
     const [openPlan3, setOpenPlan3] = useState(false);
 
-    return(
-        <section className="max-w-5xl m-auto pt-16 pb-5 px-2.5 text-center flex flex-col gap-5" id="floorplan">
-            <h3 className="text-3xl uppercase font-semibold text-primary-brown">Floor Plan</h3>
-            <div className="w-20 h-1 bg-black m-auto"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-5 p-2.5">
-                {/* Plan 1 */}
-                <div className="p-3.5 border-primary-brown border-2 rounded-tl-3xl rounded-br-3xl flex flex-col gap-5 items-center justify-between">
-                    <img
-                        src={floorPlan1}
-                        alt="Ananta Aspire Zirakpur 3BHK apartment 1830 sq. ft. luxury flats in Zirakpur with modern amenities"
-                        className="p-2.5 cursor-pointer"
-                        onClick={() => setOpenPlan1(true)}
-                    />
-                    <Lightbox
-                        open={openPlan1}
-                        close={() => setOpenPlan1(false)}
-                        slides={[
-                            { src: floorPlan1 }
-                        ]}
-                        plugins={[Fullscreen, Zoom]}
-                        carousel={{ finite: 1 }}
-                        render={{
-                            buttonPrev: undefined,
-                            buttonNext: undefined,
-                        }}
-                        className="single-lightbox"
-                    />
-                    <button className="rounded-tl-3xl rounded-br-3xl border-primary-brown border-2 py-3 px-6 text-sm font-medium text-white bg-primary-brown hover:bg-white hover:text-primary-brown leading-4">3 BHK (1830 sq. feet)</button>
-                </div>
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleOpenClose = () => setOpen(false);
 
-                {/* Plan 2 */}
-                <div className="p-3.5 border-primary-brown border-2 rounded-tl-3xl rounded-br-3xl flex flex-col gap-5 items-center justify-between">
-                    <img
-                        src={floorPlan2}
-                        alt="Ananta Aspire Zirakpur 3BHK 1830 sq.ft. luxury apartment with modern amenities in Zirakpur"
-                        className="p-2.5 cursor-pointer"
-                        onClick={() => setOpenPlan2(true)}
-                    />
-                    <Lightbox
-                        open={openPlan2}
-                        close={() => setOpenPlan2(false)}
-                        slides={[
-                            { src: floorPlan2 }
-                        ]}
-                        plugins={[Fullscreen, Zoom]}
-                        carousel={{ finite: 1 }}
-                        render={{
-                            buttonPrev: undefined,
-                            buttonNext: undefined,
-                        }}
-                        className="single-lightbox"
-                    />
-                    <button className="rounded-tl-3xl rounded-br-3xl border-primary-brown border-2 py-3 px-6 text-sm font-medium text-white bg-primary-brown hover:bg-white hover:text-primary-brown leading-4">3+1 BHK (2245 sq. feet)</button>
-                </div>
+    return (
+        <>
+            <div className="floor_plans_section padding-top padding-bottom" id="floorplan">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h2 className="main_heading">Floor Plan</h2>
+                            <Tab.Container id="floor_plans_tabs" defaultActiveKey="4+1BHK">
+                                <Nav variant="pills" className="flex-row floor_plans_nav">
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="4+1BHK">4 BHK + Study Attendant Room</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="3+1BHK">3 BHK + Study Attendant Room</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="3BHK">3 BHK + Study Attendant Room</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="penthouse">Pent House / Duplex</Nav.Link>
+                                    </Nav.Item>
+                                </Nav>
 
-                {/* Plan 3 */}
-                <div className="p-3.5 border-primary-brown border-2 rounded-tl-3xl rounded-br-3xl flex flex-col gap-5 items-center justify-between">
-                    <img
-                        src={floorPlan3}
-                        alt="Ananta Aspire Zirakpur 4BHK 2900 sq.ft. luxury apartment with premium amenities in Zirakpur"
-                        className="p-2.5 cursor-pointer"
-                        onClick={() => setOpenPlan3(true)}
-                    />
-                    <Lightbox
-                        open={openPlan3}
-                        close={() => setOpenPlan3(false)}
-                        slides={[
-                            { src: floorPlan3 }
-                        ]}
-                        plugins={[Fullscreen, Zoom]}
-                        carousel={{ finite: 1 }}
-                        render={{
-                            buttonPrev: undefined,
-                            buttonNext: undefined,
-                        }}
-                        className="single-lightbox"
-                    />
-                    <button className="rounded-tl-3xl rounded-br-3xl border-primary-brown border-2 py-3 px-6 text-sm font-medium text-white bg-primary-brown hover:bg-white hover:text-primary-brown leading-4">4+1 BHK (2900 sq. feet)</button>
-                </div>
-                
+                                <Tab.Content>
+                                    <Tab.Pane eventKey="4+1BHK">
+                                        <div className="floor_blans_image">
+                                            <img src={floor1} alt="4 BHK + Study Attendant Room" className="floor_plan_img" onClick={() => setOpenPlan1(true)} />
+                                            <Lightbox
+                                                open={openPlan1}
+                                                close={() => setOpenPlan1(false)}
+                                                slides={[
+                                                    { src: floor1 }
+                                                ]}
+                                                plugins={[Fullscreen, Zoom]}
+                                                carousel={{ finite: 1 }}
+                                                render={{
+                                                    buttonPrev: undefined,
+                                                    buttonNext: undefined,
+                                                }}
+                                                className="single-lightbox"
+                                            />
+                                        </div>
+                                        <div className="floor_palns_flex">
+                                            <div className="floor_plans_left">
+                                                <h3 className="floor_text_title">4+1 BHK APARTMENT</h3>
+                                                <p className="floor_text_content">Super Area - 2900 sq.ft.</p>
+                                                <p className="floor_text_content">Covered Area - 2120 sq.ft.</p>
+                                                <p className="floor_text_content">Carpet - 1861 sq.ft.</p>
+                                            </div>
+                                            <div className="floor_plans_right">
+                                                <Button className="floor_plans_btn" onClick={() => handleOpen()}>
+                                                    <img src={openIcon} alt="open" className="open_icon" />
+                                                    Explore More
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </Tab.Pane>
+
+                                    {/* 3BKH + 1 */}
+                                    <Tab.Pane eventKey="3+1BHK">
+                                        <div className="floor_blans_image">
+                                            <img src={floor2} alt="3 BHK + Study Attendant Room" className="floor_plan_img" onClick={() => setOpenPlan2(true)} />
+                                            <Lightbox
+                                                open={openPlan2}
+                                                close={() => setOpenPlan2(false)}
+                                                slides={[
+                                                    { src: floor2 }
+                                                ]}
+                                                plugins={[Fullscreen, Zoom]}
+                                                carousel={{ finite: 1 }}
+                                                render={{
+                                                    buttonPrev: undefined,
+                                                    buttonNext: undefined,
+                                                }}
+                                                className="single-lightbox"
+                                            />
+                                        </div>
+                                        <div className="floor_palns_flex">
+                                            <div className="floor_plans_left">
+                                                <h3 className="floor_text_title">3+1 BHK APARTMENT</h3>
+                                                <p className="floor_text_content">Super Area - 2945.45.00 sq.ft.</p>
+                                                <p className="floor_text_content">Covered Area - 2175.95 sq.ft.</p>
+                                                <p className="floor_text_content">Carpet - 1868.30 sq.ft.</p>
+                                            </div>
+                                            <div className="floor_plans_right">
+                                                <Button className="floor_plans_btn" onClick={() => handleOpen()}>
+                                                    <img src={openIcon} alt="open" className="open_icon" />
+                                                    Explore More
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </Tab.Pane>
+
+                                    {/* 3BHK */}
+                                    <Tab.Pane eventKey="3BHK">
+                                        <div className="floor_blans_image">
+                                            <img src={floor3} alt="3BHK Apartment" className="floor_plan_img" onClick={() => setOpenPlan3(true)} />
+                                            <Lightbox
+                                                open={openPlan3}
+                                                close={() => setOpenPlan3(false)}
+                                                slides={[
+                                                    { src: floor3 }
+                                                ]}
+                                                plugins={[Fullscreen, Zoom]}
+                                                carousel={{ finite: 1 }}
+                                                render={{
+                                                    buttonPrev: undefined,
+                                                    buttonNext: undefined,
+                                                }}
+                                                className="single-lightbox"
+                                            />
+                                        </div>
+                                        <div className="floor_palns_flex">
+                                            <div className="floor_plans_left">
+                                                <h3 className="floor_text_title">3 BHK APARTMENT</h3>
+                                                <p className="floor_text_content">Super Area - 1843.00 sq.ft.</p>
+                                                <p className="floor_text_content">Covered Area - 1248.00 sq.ft.</p>
+                                                <p className="floor_text_content">Carpet - 1064.00 sq.ft.</p>
+                                            </div>
+                                            <div className="floor_plans_right">
+                                                <Button className="floor_plans_btn" onClick={() => handleOpen()}>
+                                                    <img src={openIcon} alt="open" className="open_icon" />
+                                                    Explore More
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </Tab.Pane>
+
+                                    {/* Pent House */}
+                                    <Tab.Pane eventKey="penthouse">
+                                        <div className="floor_blans_image">
+                                            <img src={floor4} alt="Pent House / Duplex" className="floor_plan_img" onClick={() => handleOpen()} />
+                                        </div>
+                                        <div className="floor_palns_flex">
+                                            <div className="floor_plans_left">
+                                                {/* <h3 className="floor_text_title">Pent House / Duplex</h3>
+                                                <p className="floor_text_content">Super Area - 2900 sq.ft.</p>
+                                                <p className="floor_text_content">Covered Area - 2120 sq.ft.</p>
+                                                <p className="floor_text_content">Carpet - 1861 sq.ft.</p> */}
+                                            </div>
+                                            <div className="floor_plans_right">
+                                                <Button className="floor_plans_btn" onClick={() => handleOpen()}>
+                                                    <img src={openIcon} alt="open" className="open_icon" />
+                                                    Send Request
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    </Tab.Pane>
+
+                                </Tab.Content>
+                            </Tab.Container>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
-        </section>
+
+            {/* Popup */}
+                              <Dialog
+                                open={open}
+                                onClose={handleOpenClose}
+                                className="form_popup same"
+                                aria-hidden="false"
+                                sx={{
+                                  "& .MuiDialog-container": {
+                                    "& .MuiPaper-root": {
+                                      width: "100%",
+                                      maxWidth: "450px",
+                                      borderRadius: "0px",
+                                      borderColor:'#8f6445',
+                                      // border: '4px solid #8f6445',
+                                      backgroundColor: "#f7f7f7",
+                                      padding: "15px",
+                                      boxShadow: '0px 0px 4px 0px #0000001A'
+                                    },
+                                  },
+                                }}
+                                aria-modal="true"
+                              >
+                                <div className="flex flex-col px-2.5 popup-form ">
+                                  <div className="flex justify-end btn-icon">
+                                    <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
+                                  </div>
+                                  <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                                </div>
+                              </Dialog>
+        </>
     )
 }
 

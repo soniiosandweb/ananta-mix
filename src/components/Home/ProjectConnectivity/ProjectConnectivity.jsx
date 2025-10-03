@@ -1,178 +1,167 @@
-import { faBuilding, faMapMarkerAlt, faPlane, faRoad, faTrain, faUniversity } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "./ProjectConnectivity.css";
+import connectivityBg from "../../../assests/images/connectivity/connectivity_bg.jpg";
+import mapImg from "../../../assests/images/connectivity/location-map.png";
+import { Accordion, Col, Container, Row } from "react-bootstrap";
+import { faBuilding, faMapMarkerAlt, faPlane, faRoad, faTrain, faUniversity } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const connectivityData = [
+    {
+        title: "Accessibility",
+        id:"accessibility",
+        data: [
+            {
+                        title: "Mohali International Airport",
+                        min: "15 Mins",
+                        icon: faPlane
+                    },
+                    {
+                        title: "VIP Road",
+                        min: "5 Mins",
+                        icon: faRoad
+                    },
+                    {
+                        title: "24 Seven",
+                        min: "15 Mins",
+                        icon: faRoad
+                    },
+                    {
+                        title: "Ambala Road",
+                        min: "5 Mins",
+                        icon: faRoad
+                    },
+                    {
+                        title: "Chandigarh Railway Station",
+                        min: "20 Mins",
+                        icon: faTrain
+                    }
+        ]
+    },
+    {
+        title: "Hospitals",
+        id:"hospitals",
+        data: [
+            {
+                title: "AMCARE Hospital",
+                min: "5 Mins",
+                icon: faBuilding
+            },
+            {
+                title: "Trinity Hospital",
+                min: "4 Mins",
+                icon: faBuilding
+            },
+            {
+                title: "VCare Hospital",
+                min: "2 Mins",
+                icon: faBuilding
+            },
+            {
+                title: "SS Multiscpeciality",
+                min: "2 Mins",
+                icon: faBuilding
+            }
+        ]
+    },
+    {
+        title: "Education",
+        id:"education",
+        data: [
+            {
+                title: "Bachpan Play School",
+                min: "15 Mins",
+                icon: faUniversity
+            },
+            {
+                title: "Dikshant Global School",
+                min: "9 Mins",
+                icon: faUniversity
+            },
+            {
+                title: "St. Xavier International School",
+                min: "7 Mins",
+                icon: faUniversity
+            },
+            {
+                title: "Glooming Kids Smart School",
+                min: "4 Mins",
+                icon: faUniversity
+            },
+            {
+                title: "Silver Wings Universal School",
+                min: "8 Mins",
+                icon: faUniversity
+            }
+        ]
+    },
+    {
+        title: "Hotel/Entertainment",
+        id:"entertainment",
+        data: [
+            {
+                        title: "Elante Mall",
+                        min: "15 Mins",
+                        icon: faMapMarkerAlt
+                    },
+                    {
+                        title: "Radisson Hotel",
+                        min: "01 Min",
+                        icon: faMapMarkerAlt
+                    },
+                    {
+                        title: "Walmart",
+                        min: "10 Mins",
+                        icon: faMapMarkerAlt
+                    },
+                    {
+                        title: "HLP Social Square",
+                        min: "01 Min",
+                        icon: faMapMarkerAlt
+                    },
+                    {
+                        title: "D-Mart",
+                        min: "5 Mins",
+                        icon: faMapMarkerAlt
+                    }
+        ]
+    }
+]
 
 const ProjectConnectivity = () => {
-
-    const accessibility = [
-        {
-            title: "Mohali International Airport",
-            min: "15 Mins",
-            icon: faPlane
-        },
-        {
-            title: "VIP Road",
-            min: "5 Mins",
-            icon: faRoad
-        },
-        {
-            title: "24 Seven",
-            min: "15 Mins",
-            icon: faRoad
-        },
-        {
-            title: "Ambala Road",
-            min: "5 Mins",
-            icon: faRoad
-        },
-        {
-            title: "Chandigarh Railway Station",
-            min: "20 Mins",
-            icon: faTrain
-        }
-    ]
-
-    const hospitals = [
-        {
-            title: "AMCARE Hospital",
-            min: "5 Mins",
-            icon: faBuilding
-        },
-        {
-            title: "Trinity Hospital",
-            min: "4 Mins",
-            icon: faBuilding
-        },
-        {
-            title: "VCare Hospital",
-            min: "2 Mins",
-            icon: faBuilding
-        },
-        {
-            title: "SS Multiscpeciality",
-            min: "2 Mins",
-            icon: faBuilding
-        }
-    ]
-
-    const education = [
-        {
-            title: "Bachpan Play School",
-            min: "15 Mins",
-            icon: faUniversity
-        },
-        {
-            title: "Dikshant Global School",
-            min: "9 Mins",
-            icon: faUniversity
-        },
-        {
-            title: "St. Xavier International School",
-            min: "7 Mins",
-            icon: faUniversity
-        },
-        {
-            title: "Glooming Kids Smart School",
-            min: "4 Mins",
-            icon: faUniversity
-        },
-        {
-            title: "Silver Wings Universal School",
-            min: "8 Mins",
-            icon: faUniversity
-        }
-    ]
-
-    const hotel = [
-        {
-            title: "Elante Mall",
-            min: "15 Mins",
-            icon: faMapMarkerAlt
-        },
-        {
-            title: "Radisson Hotel",
-            min: "01 Min",
-            icon: faMapMarkerAlt
-        },
-        {
-            title: "Walmart",
-            min: "10 Mins",
-            icon: faMapMarkerAlt
-        },
-        {
-            title: "HLP Social Square",
-            min: "01 Min",
-            icon: faMapMarkerAlt
-        },
-        {
-            title: "D-Mart",
-            min: "5 Mins",
-            icon: faMapMarkerAlt
-        }
-    ]
-
     return(
-        <section className="max-w-8xl m-auto pt-10 px-2.5 text-center flex flex-col gap-5" id="connectivity">
-            <h3 className="text-3xl uppercase font-semibold text-primary-brown pt-7">Project Connectivity</h3>
-            <div className="w-20 h-1 bg-black m-auto"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-row gap-5 p-2.5">
-                {/* Accessibility */}
-                <div className="flex flex-col py-2.5 gap-5 items-center md:items-start">
-                    <h4 className="text-2xl text-primary-brown font-semibold">Accessibility</h4>
-                    {accessibility.map((item,i) => (
-                        <div className="flex flex-col md:flex-row gap-3.5" key={i}>
-                            <FontAwesomeIcon icon={item.icon} style={{fontSize: "30px"}}/>
-                            <div className="text-center md:text-left text-sm">
-                                <p className="font-bold text-primary-brown leading-[1] mb-1">{item.title}</p>
-                                <p>{item.min}</p>
-                            </div>
+        <div className="project_connectivity_section padding-top padding-bottom" id="connectivity">
+            <img src={connectivityBg} alt="Project Connectivity" className="connectivity_section_bg" />
+            <Container>
+                <Row>
+                    <Col>
+                        <h2 className="main_heading">Project Connectivity</h2>
+                        <div className="location_map">
+                            <img src={mapImg} alt="Location" className="location_map_img" />
                         </div>
-                    ))}
-                </div>
-
-                {/* Hospitals */}
-                <div className="flex flex-col py-2.5 gap-5 items-center md:items-start">
-                    <h4 className="text-2xl text-primary-brown font-semibold">Hospitals</h4>
-                    {hospitals.map((item,i) => (
-                        <div className="flex flex-col md:flex-row gap-3.5" key={i}>
-                            <FontAwesomeIcon icon={item.icon} style={{fontSize: "30px"}}/>
-                            <div className="text-center md:text-left text-sm">
-                                <p className="font-bold text-primary-brown leading-[1] mb-1">{item.title}</p>
-                                <p>{item.min}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Education */}
-                <div className="flex flex-col py-2.5 gap-5 items-center md:items-start">
-                    <h4 className="text-2xl text-primary-brown font-semibold">Education</h4>
-                    {education.map((item,i) => (
-                        <div className="flex flex-col md:flex-row gap-3.5" key={i}>
-                            <FontAwesomeIcon icon={item.icon} style={{fontSize: "30px"}}/>
-                            <div className="text-center md:text-left text-sm">
-                                <p className="font-bold text-primary-brown leading-[1] mb-1">{item.title}</p>
-                                <p>{item.min}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Hotel / Entertainment */}
-                <div className="flex flex-col py-2.5 gap-5 items-center md:items-start">
-                    <h4 className="text-2xl text-primary-brown font-semibold">Hotel/Entertainment</h4>
-                    {hotel.map((item,i) => (
-                        <div className="flex flex-col md:flex-row gap-3.5" key={i}>
-                            <FontAwesomeIcon icon={item.icon} style={{fontSize: "30px"}}/>
-                            <div className="text-center md:text-left text-sm">
-                                <p className="font-bold text-primary-brown leading-[1] mb-1">{item.title}</p>
-                                <p>{item.min}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-            </div>
-        </section>
+                        <Accordion className="connectivity_accordion" defaultActiveKey="accessibility">
+                            {connectivityData.map((item, i) => (
+                                <Accordion.Item eventKey={item.id} key={i}>
+                                    <Accordion.Header>{item.title}</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className="connectivity_data_grid">
+                                            {item.data.map((list,index) => (
+                                                <div className="connectivity_data_item" key={index}>
+                                                    <FontAwesomeIcon icon={list.icon} className="connectivity_data_icon"/>
+                                                    <div className="connectivity_data">
+                                                        <p className="connectivity_data_title mb-3">{list.title}</p>
+                                                        <p className="connectivity_data_title">{list.min}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            ))}
+                        </Accordion>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }
 
