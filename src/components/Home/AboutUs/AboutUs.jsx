@@ -28,7 +28,7 @@ const AboutUs = () => {
                                 <p className="paragraph">The Ananta Aspire flats in Zirakpur seamlessly integrate advanced technology, including smart home systems with voice control and enhanced security, into stylish, spacious apartments. Residents enjoy a range of top-tier amenities, including a fitness center, swimming pool, clubhouse, and children's play area. Experience refined living and serene comfort in a vibrant setting. Welcome to The Ananta Aspire—where luxury, technology, and modern design create your perfect home in the form of 3 BHK Luxury Flats in Zirakpur and 4 BHK Luxury Apartments in Zirakpur!</p>
                             </div>
                             <div className="about_us_right_content">
-                                <img src={aboutImg} alt="About Us" className="about_img" />
+                                <img src={aboutImg} alt="Ananta Aspire Zirakpur luxury residential project exterior view on NH-7 Patiala Highway" className="about_img" />
                             </div>
                         </div>
                     </Col>

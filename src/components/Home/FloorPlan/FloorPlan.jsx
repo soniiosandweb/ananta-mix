@@ -39,7 +39,7 @@ const FloorPlan = () => {
                                         <Nav.Link eventKey="3+1BHK">3 BHK + Study Attendant Room</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="3BHK">3 BHK + Study Attendant Room</Nav.Link>
+                                        <Nav.Link eventKey="3BHK">3 BHK Apartment</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link eventKey="penthouse">Pent House / Duplex</Nav.Link>
@@ -49,7 +49,7 @@ const FloorPlan = () => {
                                 <Tab.Content>
                                     <Tab.Pane eventKey="4+1BHK">
                                         <div className="floor_blans_image">
-                                            <img src={floor1} alt="4 BHK + Study Attendant Room" className="floor_plan_img" onClick={() => setOpenPlan1(true)} />
+                                            <img src={floor1} alt="Spacious 4+1 BHK plus study and attendant room layout at Ananta Aspire Zirakpur – luxury apartment design with modern amenities." className="floor_plan_img" onClick={() => setOpenPlan1(true)} />
                                             <Lightbox
                                                 open={openPlan1}
                                                 close={() => setOpenPlan1(false)}
@@ -84,7 +84,7 @@ const FloorPlan = () => {
                                     {/* 3BKH + 1 */}
                                     <Tab.Pane eventKey="3+1BHK">
                                         <div className="floor_blans_image">
-                                            <img src={floor2} alt="3 BHK + Study Attendant Room" className="floor_plan_img" onClick={() => setOpenPlan2(true)} />
+                                            <img src={floor2} alt="Modern 3+1 BHK plus study and attendant room layout at Ananta Aspire Zirakpur – premium luxury flat design with elegant interiors and amenities." className="floor_plan_img" onClick={() => setOpenPlan2(true)} />
                                             <Lightbox
                                                 open={openPlan2}
                                                 close={() => setOpenPlan2(false)}
@@ -119,7 +119,7 @@ const FloorPlan = () => {
                                     {/* 3BHK */}
                                     <Tab.Pane eventKey="3BHK">
                                         <div className="floor_blans_image">
-                                            <img src={floor3} alt="3BHK Apartment" className="floor_plan_img" onClick={() => setOpenPlan3(true)} />
+                                            <img src={floor3} alt="Spacious 3BHK apartment layout at Ananta Aspire Zirakpur – modern luxury flat with premium amenities and elegant living space design." className="floor_plan_img" onClick={() => setOpenPlan3(true)} />
                                             <Lightbox
                                                 open={openPlan3}
                                                 close={() => setOpenPlan3(false)}
@@ -154,7 +154,7 @@ const FloorPlan = () => {
                                     {/* Pent House */}
                                     <Tab.Pane eventKey="penthouse">
                                         <div className="floor_blans_image">
-                                            <img src={floor4} alt="Pent House / Duplex" className="floor_plan_img" onClick={() => handleOpen()} />
+                                            <img src={floor4} alt="Luxury penthouse duplex at Ananta Aspire Zirakpur – premium rooftop residence with modern interiors, spacious design, and high-end amenities" className="floor_plan_img" onClick={() => handleOpen()} />
                                         </div>
                                         <div className="floor_palns_flex">
                                             <div className="floor_plans_left">
@@ -188,14 +188,14 @@ const FloorPlan = () => {
                                 sx={{
                                   "& .MuiDialog-container": {
                                     "& .MuiPaper-root": {
-                                      width: "100%",
-                                      maxWidth: "450px",
-                                      borderRadius: "0px",
-                                      borderColor:'#8f6445',
-                                      // border: '4px solid #8f6445',
-                                      backgroundColor: "#f7f7f7",
-                                      padding: "15px",
-                                      boxShadow: '0px 0px 4px 0px #0000001A'
+                                        width: "100%",
+                                        maxWidth: "450px",
+                                        borderRadius: "8px",
+                                        borderColor:'#fff',
+                                        // border: '4px solid #8f6445',
+                                        backgroundColor: "#8F6445E5",
+                                        padding: "15px",
+                                        boxShadow: '0px 0px 4px 0px #0000001A'
                                     },
                                   },
                                 }}

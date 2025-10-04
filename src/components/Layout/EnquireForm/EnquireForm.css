@@ -33,3 +33,135 @@ input.align-middle.size-4 {
 span.thanku-txt {
     font-size: 25px;
 }
+.css-19eiqil-MuiModal-root-MuiDialog-root .MuiDialog-container .MuiPaper-root {
+    margin: 15px;
+}
+.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+    background-color: var(--color-transparent) !important;
+}
+.PhoneInputCountrySelectArrow {
+    opacity: 1 !important;
+    --PhoneInputCountrySelectArrow-color: var(--color-black) !important;
+}
+.PhoneInputCountryIcon {
+    margin-right: 5px;
+}
+.enquire-form h5 {
+    font-size: 25px;
+    color: var(--color-white);
+    font-weight: 600;
+    font-family: var(--font-semibold);
+}
+.enquire-form input {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-medium);
+    padding: 12px 30px !important;
+    height: auto;
+    border: 1px solid var(--color-white) !important;
+    border-radius: 8px;
+    background-color: #FFFDFDAB !important;
+    color: var(--color-black);
+}
+.enquire-form input::placeholder {
+    color: var(--color-black);
+}
+.enquire-form .PhoneInput {
+    border: 1px solid var(--color-white) !important;
+    border-radius: 8px;
+    background-color: #FFFDFDAB !important;
+    padding: 12px 30px !important;
+}
+.enquire-form .PhoneInput input {
+    border: none !important;
+    border-radius: 0px;
+    padding: 0 10px !important;
+    background-color: var(--color-transparent) !important;
+}
+.enquire-form .checkbox_div {
+    margin-top: 1rem !important;
+    font-size: 14px;
+    color: var(--color-white);
+    align-items: start;
+}
+.enquire-form input.checkbox {
+    background-color: var(--color-transparent) !important;
+    margin-top: 5px;
+    border: 1px solid var(--color-white) !important;
+}
+.enquire-form .submit_btn {
+    background-color: var(--color-transparent) !important;
+    color: var(--color-white);
+    width: 100%;
+    text-transform: uppercase;
+    padding: 16px 20px !important;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-medium);
+    border: 1px solid var(--color-white) !important;
+    margin-top: 2rem;
+}
+.enquire-form .submit_btn:hover {
+    background-color: #FFFDFDAB !important;
+    color: var(--color-black) !important;
+}
+svg {
+    color: var(--color-white);
+}
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  background: var(--color-transparent);
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 3px 5px 0 0;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background: #2196f3;
+  border-color: #2196f3;
+}
+
+/* Check icon */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+@media (max-width: 767px) {
+    .enquire-form h5 {
+        font-size: 20px;
+    }
+    .enquire-form input,
+    .enquire-form .PhoneInput {
+        font-size: 16px;
+        padding: 8px 20px !important;
+    }
+    .enquire-form .submit_btn {
+        padding: 12px 20px !important;
+    }
+}
+@media (max-width: 480px) {
+    .css-19eiqil-MuiModal-root-MuiDialog-root .MuiDialog-container .MuiPaper-root {
+        padding: 15px 10px !important;
+    }
+}

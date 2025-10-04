@@ -39,6 +39,7 @@
 .banner_slider_item .col {
     display: flex;
     align-items: center;
+    margin-top: 60px;
 }
 .banner_slider_item .banner_sliders_flex {
     display: flex;
@@ -67,25 +68,20 @@
     width: max-content;
     font-weight: 600;
     font-family: var(--font-semibold);
-    padding: 10.5px 20px;
-    min-width: 200px;
+    padding: 10.5px 15px;
     text-align: center;
 }
 .banner_slider_text_block {
-    max-width: 630px;
+    max-width: 90%;
     flex: 1;
 }
 .banner_slider_text_bg {
-    /* background-color: #220D05C4; */
     color: var(--color-white);
     padding: 1.5rem 0;
-    /* border-radius: 8px 0 0 8px; */
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    justify-content: space-between;
-    min-height: 348px;
-    /* margin-top: -2px; */
+    gap: 1.5rem;
+    justify-content: center;
 }
 .banner_slider_heading {
     font-size: 38px;
@@ -104,17 +100,17 @@
     line-height: 25px;
     font-weight: 600;
     font-family: var(--font-semibold);
-    background-color: var(--color-red);
+    background-color: #FF000057;
     border-radius: 8px;
     width: fit-content;
-    padding: 8px 10px;
+    padding: 8px 15px;
 }
 .banner_slider_icons_lists {
     display: flex;
     gap: 10px;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 450px;
+    max-width: 480px;
 }
 .banner_slider_lists_item {
     display: flex;
@@ -126,19 +122,46 @@
     font-family: var(--font-medium);
     width: 40%;
 }
+.banner_slider_lists_item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+@media (min-width: 1500px) {
+    .banner_slider_heading {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .banner_slider_subtext {
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .banner_slider_red_text {
+        font-size: 25px;
+        line-height: 28px;
+    }
+    .banner_slider_lists_item  {
+        font-size: 18px;
+    }
+    .banner_slider_icons_lists {
+        max-width: 550px;
+    }
+    .banner_slider_text_block {
+        max-width: 80%;
+    }
+}
 @media (max-width: 1499px) {
     .banner_slider_item .banner_sliders_flex {
-        width: 100%;
-        max-width: 1280px;
+        width: 90%;
     }
 }
 @media (max-width: 991px) {
     .banner_slider_heading {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 30px;
+        line-height: 34px;
     }
     .banner_slider_subtext {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 25px;
     }
     .banner_slider_red_text {
@@ -146,13 +169,15 @@
         line-height: 22px;
     }
     .banner_slider_item .booking_text_banner {
-        min-width: 157px;
         font-size: 16px;
         line-height: 27px;
         padding: 6px 10px;
     }
     .banner_slider_item .banner_small_image {
         flex: 0 0 350px;
+    }
+    .banner_slider_item .col {
+        margin-top: 30px;
     }
 }
 @media (max-width: 767px) {
@@ -164,6 +189,7 @@
         align-items: center;
         justify-content: center;
         margin: auto;
+        width: 100%;
     }
     .banner_slider_item .banner_small_image {
         flex: 0 0 277px;
@@ -175,19 +201,18 @@
     }
     .banner_slider_text_bg {
         min-height: auto;
-    }
-    .banner_slider_heading {
-        font-size: 20px;
-        line-height: 20px;
+        gap: 1rem;
     }
     .banner_slider_subtext {
-        font-size: 16px;
-        line-height: 18px;
-        margin: 10px 0;
+        margin: 0;
     }
-    .banner_slider_red_text {
-        font-size: 16px;
-        line-height: 18px;
+    .banner_slider_lists_item {
+        font-size: 14px;
+    }
+    .banner_slider_lists_item img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
     }
 }
 @media (max-width: 575px) {
@@ -195,15 +220,25 @@
     .banner_slider_item .container-fluid {
         padding: 0 15px;
     }
+    
 }
 @media (max-width: 480px) {
-    /* .banner_slider_text_block {
-        max-width: 277px;
-    } */
-    /* .banner_slider_text_bg {
-        gap: 5px;
-        padding: 1rem;
-    } */
+    .banner_slider_heading {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .banner_slider_subtext {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .banner_slider_red_text {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 8px 10px;
+    }
+    .banner_slider_item .col {
+        margin-top: 20px;
+    }
     .banner_slider_lists_item {
         width: 100%;
     }

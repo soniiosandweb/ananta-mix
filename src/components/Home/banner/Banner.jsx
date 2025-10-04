@@ -1,6 +1,6 @@
 import "./Banner.css";
 import Slider from "react-slick";
-import banner1 from "../../../assests/images/banner/banner1.png";
+import banner1 from "../../../assests/images/banner/banner1.jpg";
 import bannerSmall1 from "../../../assests/images/banner/banner1-small.jpg";
 import banner2 from "../../../assests/images/banner/banner2.png";
 import bannerSmall2 from "../../../assests/images/banner/banner2-small.jpg";
@@ -20,7 +20,7 @@ const slides = [
         text: "A new Chapter Begins, Possession Handed over, Families are now Calling it Home",
         subtext: "Move in Today | Be Part Of Our Growing Community",
         image: banner1,
-        imageAlt: "Families Have Mooved In",
+        imageAlt: "Families have moved into 3 BHK luxury flats in Zirakpur at Ananta Aspire, showcasing happy residents and modern living spaces.",
         smallAlt: "Families Have Mooved In",
         smallImg: bannerSmall1,
     },
@@ -29,7 +29,7 @@ const slides = [
         text: "Luxury 3BHK, 4BHK Apartments for Sale",
         subtext: "Luxury Flats stating at just ₹1.5 Cr",
         image: banner2,
-        imageAlt: "Ananta Aspire",
+        imageAlt: "Modern and spacious flats for sale in Zirakpur at Ananta Aspire, offering premium amenities and comfortable living spaces.",
         smallAlt: "Ananta Aspire",
         smallImg: bannerSmall2,
     },
@@ -38,7 +38,7 @@ const slides = [
         text: "440 exclusive luxury residences with integrated smart home feature and unmatched comfort.",
         subtext: "Luxury Flats stating at just ₹1.5 Cr",
         image: banner3,
-        imageAlt: "Ananta Aspire",
+        imageAlt: "Couple relaxing and enjoying the night at Ananta Aspire, part of new residential projects in Zirakpur with modern amenities and serene surroundings.",
         smallAlt: "Ananta Aspire",
         smallImg: bannerSmall3,
     },
@@ -47,7 +47,7 @@ const slides = [
         text: "Combining modern technology and premium comfort in zirakpur’s most exclusive address.",
         subtext: "Luxury Flats stating at just ₹1.5 Cr",
         image: banner4,
-        imageAlt: "Ananta Aspire",
+        imageAlt: "Flats for sale in Zirakpur at Ananta Aspire surrounded by lush greenery, offering a serene and eco-friendly living environment.",
         smallAlt: "Ananta Aspire",
         smallImg: bannerSmall4,
     },
@@ -56,7 +56,7 @@ const slides = [
         text: "Explore Luxury 3 & 4 BHK apartments for sale in zirkapur, ennriched with voice-controlled smart home features.",
         subtext: "Luxury Flats stating at just ₹1.5 Cr",
         image: banner5,
-        imageAlt: "Ananta Aspire",
+        imageAlt: "Night view of Ananta Aspire with sparkling lights and large landscaped gardens, showcasing 3 BHK luxury flats for sale in Zirakpur.",
         smallAlt: "Ananta Aspire",
         smallImg: bannerSmall5,
     }

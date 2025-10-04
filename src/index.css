@@ -11,16 +11,41 @@
   font-family: "Rubik";
   src: url('./assests/font/rubik.woff2');
 }
+
+@font-face {
+  font-family: "Poppins";
+  src: url('./assests/font/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url('./assests/font/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url('./assests/font/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url('./assests/font/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "Mono-Dance";
+  src: url('./assests/font/MoonDance-Regular.ttf');
+}
+
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
   position: relative;
-  font-family: 'TT Norms', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  padding-right: 0 !important;
+  overflow-y: auto !important;
 }
 .cookie-banner{
   top: 0 !important;
@@ -42,14 +67,14 @@ body {
   }
 }
 code {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Poppins-Medium', sans-serif;
 }
 .font-norms{
-  font-family: 'TT Norms', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .font-rubik{
@@ -107,27 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 .p-5 {
     padding: 1.25rem !important;
 }
-@font-face {
-  font-family: "Poppins";
-  src: url('./assests/font/Poppins-Regular.ttf');
-}
-@font-face {
-  font-family: "Poppins-Medium";
-  src: url('./assests/font/Poppins-Medium.ttf');
-}
-@font-face {
-  font-family: "Poppins-Bold";
-  src: url('./assests/font/Poppins-Bold.ttf');
-}
-@font-face {
-  font-family: "Poppins-SemiBold";
-  src: url('./assests/font/Poppins-SemiBold.ttf');
-}
 
-@font-face {
-  font-family: "Mono-Dance";
-  src: url('./assests/font/MoonDance-Regular.ttf');
-}
 
 :root {
   --color-white: #fff;
@@ -141,10 +146,10 @@ h1, h2, h3, h4, h5, h6 {
   --color-border: #B7B7B7;
   --color-transparent: transparent;
   --color-header-bg: #ffffffc7;
-  /* --font-semibold: "Poppins-SemiBold";
+  --font-semibold: "Poppins-SemiBold";
   --font-bold: "Poppins-Bold";
   --font-medium: "Poppins-Medium";
-  --font-regular: "Poppins"; */
+  --font-regular: "Poppins";
   --bs-border-width: 0;
   --bs-border-radius-lg: 8px;
 }

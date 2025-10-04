@@ -4,8 +4,8 @@ import PhoneInput, { isPossiblePhoneNumber, isValidPhoneNumber } from "react-pho
 import { useState } from 'react';
 import axios from 'axios';
 import { CircularProgress } from '@mui/material';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const EnquireForm = ({ title, setOpen, button }) => {
     const [formVisible, setFormVisible] = useState(true);
@@ -171,13 +171,13 @@ const EnquireForm = ({ title, setOpen, button }) => {
 
                 {formSuccess && (
                     <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
-                        <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div>
+                        {/* <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div> */}
                         <span className='flex flex-col gap-2 flex flex-col success-text'>{formSuccess}</span>
                     </p>
                 )}
                 {formVisible && (<div className='gap-2' id='enquiry-form'>
                     <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
-                    <div className="py-2">
+                    <div className="py-2 form-row">
                         <input
                             type="text"
                             id="name"
@@ -189,7 +189,7 @@ const EnquireForm = ({ title, setOpen, button }) => {
                             onChange={(e) => NameChange(e)}
                         />
                     </div>
-                    <div className="py-2">
+                    <div className="py-2 form-row">
                         <input
                             type="text"
                             id="email"
@@ -201,7 +201,7 @@ const EnquireForm = ({ title, setOpen, button }) => {
                             onChange={(e) => EmailChange(e)}
                         />
                     </div>
-                    <div className="py-2">
+                    <div className="py-2 form-row">
                         <PhoneInput
                             required
                             type="tel"
@@ -223,7 +223,16 @@ const EnquireForm = ({ title, setOpen, button }) => {
                         )}
                     </div>
 
-                    <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}><input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span></p>
+                    <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}>
+                        {/* <input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} />  */}
+                        
+
+                        <label className="custom-checkbox">
+                            <input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> 
+                            <span className="checkmark"></span>
+                        </label>
+                        <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span>
+                    </p>
 
                     <div className="mt-2.5 text-center flex items-center gap-5 justify-center">
                         <input type="submit" value={button ? button : 'Download Now'} className={`submit_btn font-bold uppercase text-xs  py-2.5 sm:pb-3.5 sm:pt-[15px] px-3.5 sm:px-[22px] 1xl:px-8 rounded-md text-primary-brown  bg-white border-2 border-primary-brown hover:bg-primary-brown hover:text-white cursor-pointer`} />

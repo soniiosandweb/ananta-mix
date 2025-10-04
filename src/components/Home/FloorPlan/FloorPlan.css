@@ -7,6 +7,7 @@
     border: 1px solid var(--color-border);
     font-size: 20px;
     font-weight: 600;
+    font-family: var(--font-semibold);
     color: var(--color-black);
     border-radius: 8px;
 }
@@ -31,6 +32,7 @@
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: var(--font-medium);
 }
 .floor_palns_flex .floor_text_content {
     font-size: 18px;

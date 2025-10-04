@@ -22,7 +22,7 @@ import interior1 from "../../../assests/images/gallery/new-gallery/interior1.jpg
 import interior2 from "../../../assests/images/gallery/new-gallery/interior2.jpg";
 import interior3 from "../../../assests/images/gallery/new-gallery/interior3.jpg";
 import interior4 from "../../../assests/images/gallery/new-gallery/interior4.jpg";
-import interior5 from "../../../assests/images/gallery/new-gallery/interior5.png";
+import interior5 from "../../../assests/images/gallery/new-gallery/interior5.jpg";
 import interior6 from "../../../assests/images/gallery/new-gallery/interior6.png";
 import interior7 from "../../../assests/images/gallery/new-gallery/interior7.jpg";
 import interior8 from "../../../assests/images/gallery/new-gallery/interior8.jpg";
@@ -68,7 +68,7 @@ import lobb6 from "../../../assests/images/gallery/new-gallery/lobby6.png";
 
 // Pool Image
 import pool1 from "../../../assests/images/gallery/new-gallery/pool1.png";
-import pool2 from "../../../assests/images/gallery/new-gallery/pool2.jpg";
+import pool2 from "../../../assests/images/gallery/new-gallery/gallery8.jpg";
 
 const Gallery = () => {
 
@@ -79,45 +79,45 @@ const Gallery = () => {
     const images = [
         {
             src: gallery1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Gallery showcasing modern exteriors and elegant design at Ananta Aspire Zirakpur, highlighting luxury flats in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: gallery2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Spacious parking facility at Ananta Aspire Zirakpur with organized layout and modern design, highlighting flats for sale in Zirakpur.",
         },
         {
             src: gallery3,
-            title: "Ananta Aspire Zirakpur premium 3BHK and 4BHK smart home apartments with modern design and lifestyle amenities",
+            title: "Residents walking along the poolside at Ananta Aspire Zirakpur, enjoying landscaped surroundings and serene outdoor amenities.",
         },
         {
             src: gallery4,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Children’s swing and play area at Ananta Aspire Zirakpur, highlighting safe and fun amenities in Zirakpur 3BHK flats.",
             rows: 2,
             cols: 2,
         },
         {
             src: gallery5,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "People sitting near trees and relaxing at Ananta Aspire Zirakpur, enjoying the landscaped outdoor spaces and serene surroundings.",
             cols: 2,
         },
         {
             src: gallery6,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Modern office space at Ananta Aspire Zirakpur with contemporary design and professional ambiance, part of new residential projects in Zirakpur.",
             cols: 2,
         },
         {
             src: gallery7,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Shaded seating area in landscaped park at Ananta Aspire Zirakpur, providing relaxing spots for residents, highlighting Ananta Aspire flats in Zirakpur.",
         },
         {
             src: gallery8,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",  
+            title: "Swimming pool area at Ananta Aspire Zirakpur with modern design and relaxing ambiance, part of 3 BHK luxury flats in Zirakpur.",  
         },
         {
             src: gallery9,
-            title: "Ananta Aspire Zirakpur children’s play area – safe and fun recreational space in luxury residential apartments in Zirakpur",
+            title: "Night view of Ananta Aspire flats in Zirakpur with a girl standing near a flowing fountain, showcasing elegant lighting and ambiance, highlighting Ananta Aspire flats for sale.",
             cols: 2,
         }
     ]
@@ -136,45 +136,45 @@ const Gallery = () => {
     const interiorImages = [
         {
             src: interior1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Stylish living room interior at Ananta Aspire Zirakpur showcasing modern décor, spacious layout, and premium luxury apartment design.",
             rows: 2,
             cols: 2,
         },
         {
             src: interior2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Luxury apartment interior at Ananta Aspire Zirakpur featuring modern design, elegant furnishings, and premium living space ambiance.",
         },
         {
             src: interior3,
-            title: "Ananta Aspire Zirakpur premium 3BHK and 4BHK smart home apartments with modern design and lifestyle amenities",
+            title: "Spacious bedroom with elegant decor in luxury flats in Zirakpur, offering comfort and modern living ambiance.",
         },
         {
             src: interior4,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Elegant living room at Ananta Aspire Zirakpur featuring a stylish sofa set and modern dining table in a spacious, well-designed interior.",
             rows: 2,
             cols: 2,
         },
         {
             src: interior5,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "Experience premium living at AnantaAspire flats in Zirakpur with a stylish LED TV setup, elegant dining table, luxury sofa set, and stunning outside view that defines modern comfort and elegance.",
             cols: 2,
         },
         {
             src: interior6,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Modern living room at Ananta Aspire Zirakpur featuring a white sofa set and LED TV unit, highlighting luxury interiors and premium apartment design.",
             cols: 2,
         },
         {
             src: interior7,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Modern kitchen design at Ananta Aspire Zirakpur showcasing sleek interiors and premium fittings in luxury flats in Zirakpur.",
         },
         {
             src: interior8,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",  
+            title: "Spacious living area at Ananta Aspire featuring modern interiors and premium amenities, showcasing luxury flats for sale in Zirakpur.",  
         },
         {
             src: interior9,
-            title: "Ananta Aspire Zirakpur children’s play area – safe and fun recreational space in luxury residential apartments in Zirakpur",
+            title: "Elegant 3BHK Zirakpur flat interior at Ananta Aspire featuring modern décor, spacious layout, and premium lifestyle amenities.",
             cols: 2,
         }
     ]
@@ -184,45 +184,45 @@ const Gallery = () => {
     const bedroomImages = [
         {
             src: bedroom1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Luxury bedroom interior at Ananta Aspire showcasing elegant design and comfort, part of new residential projects in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: bedroom2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Modern bedroom with green bed design at Ananta Aspire, highlighting stylish interiors and premium luxury flats in Zirakpur.",
         },
         {
             src: bedroom3,
-            title: "Ananta Aspire Zirakpur premium 3BHK and 4BHK smart home apartments with modern design and lifestyle amenities",
+            title: "Beautiful bedroom with brown bed, LCD unit, and elegant curtains at Ananta Aspire, showcasing premium 3 BHK luxury flats in Zirakpur.",
         },
         {
             src: bedroom4,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Spacious bedroom with beige and white tones at Ananta Aspire featuring modern décor and elegant furnishings, highlighting Ananta Aspire flats for sale in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: bedroom5,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "Elegant bedroom interior with modern furnishings and neutral tones at Ananta Aspire, showcasing 4BHK luxury apartments in Zirakpur.",
             cols: 2,
         },
         {
             src: bedroom6,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Modern bedroom interior with stylish décor and cozy ambiance at Ananta Aspire, highlighting Zirakpur flats 3BHK with premium amenities",
             cols: 2,
         },
         {
             src: bedroom7,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Modern bedroom interior in 4BHK luxury apartments in Zirakpur at Ananta Aspire featuring a brown bed, stylish curtains, contemporary furnishings, and cozy ambiance.",
         },
         {
             src: bedroom8,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",  
+            title: "Elegant bedroom interior at Ananta Aspire featuring a beige bed, modern furnishings, and stylish curtains, highlighting flats for sale in Zirakpur.",  
         },
         {
             src: bedroom9,
-            title: "Ananta Aspire Zirakpur children’s play area – safe and fun recreational space in luxury residential apartments in Zirakpur",
+            title: "Modern kitchen interior at Ananta Aspire showcasing sleek design, premium fittings, and contemporary style in 3 BHK luxury flats in Zirakpur.",
             cols: 2,
         }
     ]
@@ -233,45 +233,45 @@ const Gallery = () => {
     const livingImages = [
         {
             src: livingRoom1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Spacious living room interior at Ananta Aspire with modern furnishings, cozy ambiance, and high-speed WiFi connectivity for residents.",
             rows: 2,
             cols: 2,
         },
         {
             src: livingRoom2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Stylish living room at Ananta Aspire featuring a modern sofa set and elegant décor, part of 3 BHK luxury flats in Zirakpur.",
         },
         {
             src: livingRoom3,
-            title: "Ananta Aspire Zirakpur premium 3BHK and 4BHK smart home apartments with modern design and lifestyle amenities",
+            title: "Cozy and contemporary living area at Ananta Aspire featuring a stylish sofa set, designed for comfort in Zirakpur 3BHK flats.",
         },
         {
             src: livingRoom4,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Modern and spacious living room interior at Ananta Aspire with elegant furnishings and décor, part of new residential projects in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: livingRoom5,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "Legant living room interior at Ananta Aspire featuring modern furniture and stylish décor, showcasing 4BHK luxury apartments in Zirakpur.",
             cols: 2,
         },
         {
             src: livingRoom6,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Contemporary living room interior at Ananta Aspire featuring modern décor and furnishings, part of 3 BHK luxury flats in Zirakpur.",
             cols: 2,
         },
         {
             src: livingRoom7,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Spacious and modern living room interior at Ananta Aspire featuring stylish furniture, elegant décor, and premium apartment design in Zirakpur.",
         },
         {
             src: livingRoom8,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",  
+            title: "Elegant living room interior at Ananta Aspire featuring contemporary furniture and décor, highlighting luxury flats in Zirakpur.",  
         },
         {
             src: livingRoom9,
-            title: "Ananta Aspire Zirakpur children’s play area – safe and fun recreational space in luxury residential apartments in Zirakpur",
+            title: "Luxurious and inviting living room at Ananta Aspire Zirakpur featuring elegant furnishings, cozy ambiance, and premium design, perfect for 4BHK luxury apartments.",
             cols: 2,
         }
     ]
@@ -282,37 +282,37 @@ const Gallery = () => {
     const kitchenImages = [
         {
             src: kitchen1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Sleek and modern kitchen at Ananta Aspire Zirakpur with premium fittings and stylish design, ideal for luxury flats in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: kitchen2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Stylish and contemporary kitchen at Ananta Aspire Zirakpur with modern fittings, elegant countertops, and premium design, perfect for flats for sale in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: kitchen3,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Modern and fully-equipped kitchen at Ananta Aspire Zirakpur featuring sleek countertops and contemporary design, ideal for Zirakpur 3BHK flats.",
             rows: 2,
             cols: 2,
         },
         {
             src: kitchen4,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "Elegant and modern kitchen interior at Ananta Aspire featuring premium fittings, spacious design, and contemporary style, part of new residential projects in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: kitchen5,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Spacious and modern kitchen at Ananta Aspire Zirakpur with premium fixtures and stylish design, showcasing 4BHK luxury apartments in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: kitchen6,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Contemporary kitchen interior at Ananta Aspire Zirakpur featuring sleek countertops, modern fittings, and elegant design, ideal for 3 BHK luxury flats in Zirakpur.",
             rows: 2,
             cols: 2,
         }
@@ -324,35 +324,35 @@ const Gallery = () => {
     const lobbyImages = [
         {
             src: lobb1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Grand and welcoming lobby at Ananta Aspire Zirakpur featuring modern décor, elegant seating, and premium ambiance, highlighting Ananta Aspire flats in Zirakpur.",
             rows: 3,
             cols: 2,
         },
         {
             src: lobb2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Stylish lobby interior at Ananta Aspire Zirakpur featuring elegant chairs, modern décor, and a welcoming ambiance, highlighting Ananta Aspire flats for sale.",
             rows: 2,
             cols: 2,
         },
         {
             src: lobb3,
-            title: "Ananta Aspire Zirakpur luxury residential apartments with world-class amenities and elegant architectural design",
+            title: "Elegant and spacious lobby at Ananta Aspire Zirakpur with modern décor, comfortable seating, and luxurious ambiance, showcasing luxury flats in Zirakpur.",
             rows: 2,
             cols: 2,
         },
         {
             src: lobb4,
-            title: "Ananta Aspire Zirakpur 3BHK and 4BHK luxury flats in Zirakpur – premium apartments for sale in new residential projects in Zirakpur",
+            title: "Modern and inviting lobby at Ananta Aspire Zirakpur featuring stylish furnishings and elegant décor, highlighting flats for sale in Zirakpur.",
             cols: 1,
         },
         {
             src: lobb5,
-            title: "Ananta Aspire Zirakpur parking area – secure and spacious parking facility for residents of luxury apartments in Zirakpur",
+            title: "Contemporary lobby interior at Ananta Aspire Zirakpur featuring stylish seating and modern décor, showcasing Zirakpur flats 3BHK.",
             cols: 1,
         },
         {
             src: lobb6,
-            title: "New residential projects and flats for sale in Zirakpur - Ananta Aspire",
+            title: "Spacious and elegant lobby at Ananta Aspire Zirakpur with modern décor and premium design, part of new residential projects in Zirakpur.",
             cols: 2,
         }
     ]
@@ -363,13 +363,13 @@ const Gallery = () => {
     const poolImages = [
         {
             src: pool1,
-            title: "Ananta Aspire Zirakpur luxury 3BHK and 4BHK apartments – modern residential project exterior view",
+            title: "Swimming pool at Ananta Aspire Zirakpur with people sitting in a shaded seating area, surrounded by landscaped amenities and relaxing ambiance.",
             rows: 3,
             cols: 3,
         },
         {
             src: pool2,
-            title: "Ananta Aspire Zirakpur modern 3BHK and 4BHK apartment project with premium lifestyle and smart living features",
+            title: "Night view of the swimming pool at Ananta Aspire Zirakpur with illuminated water, ambient lighting, and relaxing surroundings for residents.",
             rows: 3,
             cols: 3,
         }

@@ -4,7 +4,7 @@ import EnquireForm from "../../Layout/EnquireForm/EnquireForm"
 
 const ContactUs = () => {
     return (
-        <div className="contact_us_section padding-top padding-bottom">
+        <div className="contact_us_section padding-top padding-bottom" id="contact">
             <Container>
                 <Row>
                     <Col>

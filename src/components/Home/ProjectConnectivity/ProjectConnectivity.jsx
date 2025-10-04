@@ -136,7 +136,7 @@ const ProjectConnectivity = () => {
                     <Col>
                         <h2 className="main_heading">Project Connectivity</h2>
                         <div className="location_map">
-                            <img src={mapImg} alt="Location" className="location_map_img" />
+                            <img src={mapImg} alt="Ananta Aspire Zirakpur location map showing prime connectivity to Chandigarh, Mohali, and major landmarks with easy highway access." className="location_map_img" />
                         </div>
                         <Accordion className="connectivity_accordion" defaultActiveKey="accessibility">
                             {connectivityData.map((item, i) => (

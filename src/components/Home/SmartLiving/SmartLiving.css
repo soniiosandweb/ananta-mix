@@ -43,6 +43,14 @@
     width: 100%;
     max-width: 486px;
     margin-bottom: -250px;
+    height: 568px;
+}
+.smart_living_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 200px 200px;
+    object-position: top;
 }
 .smart_living_flex .smart_living_img.bottom_mobile_img {
     display: none;
@@ -76,6 +84,7 @@
     font-size: 20px;
     line-height: 22px;
     font-weight: 500;
+    font-family: var(--font-medium);
 }
 .smart_living_box_title {
     font-size: 100px;
@@ -99,6 +108,7 @@
 .description_title {
     font-size: 30px;
     font-weight: 500;
+    font-family: var(--font-medium);
     line-height: 32px;
     color: var(--color-white);
 }
@@ -164,6 +174,11 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 4rem;
+        height: 380px;
+    }
+    .smart_living_heading {
+        font-size: 35px;
+        line-height: 40px;
     }
 }
 @media (max-width: 575px) {

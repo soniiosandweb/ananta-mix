@@ -10,8 +10,42 @@ import { Container, Navbar, Nav, Offcanvas, Button } from "react-bootstrap";
 import { Dialog } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-// import whatsappIcon from "../../assests/images/whatsapp.png";
-// import downloadIcon from "../../assests/images/download.png";
+import instantCall from "../../../assests/images/support-services.png";
+import carIcon from "../../../assests/images/car.png";
+import moneyIcon from "../../../assests/images/money.png";
+import checkIcon from "../../../assests/images/check.png";
+import whatsappIcon from "../../../assests/images/whatsapp.png";
+import downloadIcon from "../../../assests/images/download.png";
+
+const promiseContent = [
+  {
+    icon: instantCall,
+    text: "Instant Call Back",
+  },
+  {
+    icon: carIcon,
+    text: "Free Site Visit",
+  },
+  {
+    icon: moneyIcon,
+    text: "Unmatched Price",
+  }
+]
+
+const informationContent = [
+  {
+    icon: checkIcon,
+    text: "Available Units",
+  },
+  {
+    icon: checkIcon,
+    text: "Payment Plan",
+  },
+  {
+    icon: checkIcon,
+    text: "Floor Plan",
+  }
+]
 
 const Header = () => {
 
@@ -160,6 +194,10 @@ console.log(id,'click')
             <div className={`main_header ${scrollClass} ${locationValue[1] === "" ||  menuLists.some(item => item.id === locationValue[1]) ? "home_header" : ""}`}>
                 <Navbar key={"lg"} expand={"lg"}>
                     <Container fluid>
+                        <Navbar.Toggle aria-controls={`header_offcanvas`} onClick={handleShow}>
+                            <img src={menuIcon} alt="menu" className="menu_icon" />
+                        </Navbar.Toggle>
+
                         <Navbar.Brand href="/">
                             <img src={logo} alt="Ananta Aspire Logo" className="logo_header" />
                         </Navbar.Brand>
@@ -222,54 +260,85 @@ console.log(id,'click')
                             <p className="header_rera_number">PBRERA-SAS79-PR0777</p>
                         </div>
 
-                        <Navbar.Toggle aria-controls={`header_offcanvas`} onClick={handleShow}>
-                            <img src={menuIcon} alt="menu" className="menu_icon" />
-                        </Navbar.Toggle>
-
                     </Container>
                 </Navbar>
             </div>
 
         
             {/* Download Brochure Button */}
-                  <div className='sticky h-0 z-20' style={{ top: "45%" }}><button tabIndex='-1' className="w-max text-xs font-medium capitalize cursor-pointer bg-primary-brown p-2 sm:p-2.5 rounded-md text-white absolute -rotate-90 download-broucher-btn" style={{ right: "-46px" }} onClick={handleOpen}>Download Brochure</button>
-                  </div>
+            {/* <div className='sticky h-0 z-20' style={{ top: "45%" }}><button tabIndex='-1' className="w-max text-xs font-medium capitalize cursor-pointer bg-primary-brown p-2 sm:p-2.5 rounded-md text-white absolute -rotate-90 download-broucher-btn" style={{ right: "-46px" }} onClick={handleOpen}>Download Brochure</button>
+            </div> */}
+            <div className="fixed_btns_header z-20">
+              <img src={downloadIcon} alt="Download" className="header_btns_float download" onClick={handleOpen} />
+              <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
+                <img src={whatsappIcon} alt="Whatsapp" className="header_btns_float whatsapp" />
+              </a>
+            </div>
             
-                  {/* Popup */}
-                  <Dialog
-                    open={open}
-                    onClose={handleOpenClose}
-                    className="form_popup same"
-                    aria-hidden="false"
-                    sx={{
-                      "& .MuiDialog-container": {
-                        "& .MuiPaper-root": {
-                          width: "100%",
-                          maxWidth: "450px",
-                          borderRadius: "0px",
-                          borderColor:'#8f6445',
-                          // border: '4px solid #8f6445',
-                          backgroundColor: "#f7f7f7",
-                          padding: "15px",
-                          boxShadow: '0px 0px 4px 0px #0000001A'
-                        },
-                      },
-                    }}
-                    aria-modal="true"
-                  >
-                    <div className="flex flex-col px-2.5 popup-form ">
-                      <div className="flex justify-end btn-icon">
-                        <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
-                      </div>
-                      <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
-                    </div>
-                  </Dialog>
-                  <div className={` side-popup-form ${showsidePopup ? 'flex' : 'hidden'} border-3 border-primary-brown `}>
-                    <div className="flex justify-end btn-icon">
-                      <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
-                    </div>
-                    <EnquireForm title="Ananta Aspire Price List" button="Get New Price List" />
+            {/* Popup */}
+              <Dialog
+                open={open}
+                onClose={handleOpenClose}
+                className="form_popup same"
+                aria-hidden="false"
+                sx={{
+                  "& .MuiDialog-container": {
+                    "& .MuiPaper-root": {
+                      width: "100%",
+                      maxWidth: "450px",
+                      borderRadius: "8px",
+                      borderColor:'#fff',
+                      // border: '4px solid #8f6445',
+                      backgroundColor: "#8F6445E5",
+                      padding: "15px",
+                      boxShadow: '0px 0px 4px 0px #0000001A'
+                    },
+                  },
+                }}
+                aria-modal="true"
+              >
+                <div className="flex flex-col px-2.5 popup-form ">
+                  <div className="flex justify-end btn-icon">
+                    <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
                   </div>
+                  <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                </div>
+              </Dialog>
+
+            {/* Price List Form */}
+            <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
+              <div className="price_list_heading_block">
+                <p className="price_list_heading">Ananta Aspire Exclusive  Price List</p>
+                <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
+              </div>
+              <div className="price_list_form_flex">
+                <div className="price_list_left_col">
+                  <p className="price_list_subheading">We Promise</p>
+                  <div className="price_lists_form_items">
+                    {promiseContent.map((item,i) => (
+                      <div className="price_lists_form_flex" key={i}>
+                        <img src={item.icon} className="icon_price" alt={item.text} />
+                        <p className="price_list_text">{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="price_list_subheading mt-4">Get Informations </p>
+                  <div className="price_lists_form_items information_items">
+                    {informationContent.map((item,i) => (
+                      <div className="price_lists_form_flex" key={i}>
+                        <img src={item.icon} className="icon_price checkIcon" alt={item.text} />
+                        <p className="price_list_text">{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="price_list_form_col">
+                  <EnquireForm title="Ananta Aspire Price List" button="Check Latest Pricing" />
+                </div>
+              </div>
+                
+            </div>
         </>
     )
 }

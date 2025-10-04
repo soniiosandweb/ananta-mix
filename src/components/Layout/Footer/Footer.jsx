@@ -59,7 +59,7 @@ const Footer = () => {
         },
     ]
     return(
-        <footer className="bg-primary-bg text-sm pt-16 footer_main">
+        <footer className="bg-primary-bg text-sm pt-6 md:pt-16 footer_main">
             <Container>
                 <Row>
                     <Col>

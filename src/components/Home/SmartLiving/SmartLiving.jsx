@@ -2,6 +2,7 @@ import "./SmartLiving.css";
 import { Col, Container, Row } from "react-bootstrap";
 import smartLivingImg from "../../../assests/images/smart-living.jpg";
 import smartLivingSmall from "../../../assests/images/smart-image.png";
+// import video from "../../../assests/images/Ananta.mp4";
 import { useState } from "react";
 
 const features = [
@@ -55,15 +56,31 @@ const SmartLiving = () => {
 
     return(
         <div className="smart_living_section padding-top padding-bottom">
-            <img src={smartLivingImg} alt="Smart Living" className="smart_living_section_bg" />
+            <img src={smartLivingImg} alt="Smart living at Ananta Aspire Zirakpur with modern amenities and intelligent home features for a comfortable lifestyle." className="smart_living_section_bg" />
             <Container>
                 <Row>
                     <Col>
                         <div className="smart_living_flex">
                             <div className="smart_living_col">
                                 <h2 className="smart_living_heading">Step into <br/>Smart Living</h2>
-                                <p className="paragraph">Ananta Aspire redefines modern living not just with spacious homes and stunning amenities, but also with cutting-edge technology integrated seamlessly into your luxury flats in Zirakpur! Invest in your future. Invest in a life of comfort, luxury, and innovation.Choose The Ananta Aspire flats for sale in Zirakpur</p>
-                                <img src={smartLivingSmall} alt="Smart Living" className="smart_living_img" />
+                                <p className="paragraph">Ananta Aspire redefines modern living not just with spacious homes and stunning amenities, but also with cutting-edge technology integrated seamlessly into your luxury flats in Zirakpur! Invest in your future. Invest in a life of comfort, luxury, and innovation.Choose The Ananta Aspire flats for sale in Zirakpur</p>
+                                <img src={smartLivingSmall} alt="Smart Living at Ananta Aspire Zirakpur with modern lifestyle amenities" className="smart_living_img" />
+                                {/* <div className="smart_living_img">
+
+                                    <video 
+                                        width="100%" 
+                                        // controls 
+                                        autoPlay 
+                                        muted 
+                                        loop 
+                                        playsInline
+                                        poster={smartLivingSmall} // optional
+                                        className="smart_living_video"
+                                    >
+                                        <source src={video} type="video/mp4" />
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div> */}
                             </div>
                             <div className="smart_living_col_right">
                                 <div className="smart_living_grid">
@@ -85,7 +102,23 @@ const SmartLiving = () => {
                                         <p className="smart_living_box_text">{features[6].title}</p>
                                     </div>
                                 </div>
-                                <img src={smartLivingSmall} alt="Smart Living" className="smart_living_img bottom_mobile_img" />
+                                <img src={smartLivingSmall} alt="Smart Living at Ananta Aspire Zirakpur with modern lifestyle amenities" className="smart_living_img bottom_mobile_img" />
+                                {/* <div className="smart_living_img bottom_mobile_img">
+
+                                    <video 
+                                        width="100%" 
+                                        // controls 
+                                        autoPlay 
+                                        muted 
+                                        loop 
+                                        playsInline
+                                        poster={smartLivingSmall} // optional
+                                        className="smart_living_video"
+                                    >
+                                        <source src={video} type="video/mp4" />
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div> */}
                             </div>
                         </div>
                     </Col>
