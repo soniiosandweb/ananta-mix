@@ -2,8 +2,10 @@ import "./ProjectConnectivity.css";
 import connectivityBg from "../../../assests/images/connectivity/connectivity_bg.jpg";
 import mapImg from "../../../assests/images/connectivity/location-map.png";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
-import { faBuilding, faMapMarkerAlt, faPlane, faRoad, faTrain, faUniversity } from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faMapMarkerAlt, faRoad, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import planeIcon from "../../../assests/images/connectivity/plane.png";
+import trainIcon from "../../../assests/images/connectivity/train.png";
 
 const connectivityData = [
     {
@@ -11,30 +13,32 @@ const connectivityData = [
         id:"accessibility",
         data: [
             {
-                        title: "Mohali International Airport",
-                        min: "15 Mins",
-                        icon: faPlane
-                    },
-                    {
-                        title: "VIP Road",
-                        min: "5 Mins",
-                        icon: faRoad
-                    },
-                    {
-                        title: "24 Seven",
-                        min: "15 Mins",
-                        icon: faRoad
-                    },
-                    {
-                        title: "Ambala Road",
-                        min: "5 Mins",
-                        icon: faRoad
-                    },
-                    {
-                        title: "Chandigarh Railway Station",
-                        min: "20 Mins",
-                        icon: faTrain
-                    }
+                title: "Mohali International Airport",
+                min: "15 Mins",
+                icon: planeIcon,
+                img: true,
+            },
+            {
+                title: "VIP Road",
+                min: "5 Mins",
+                icon: faRoad
+            },
+            {
+                title: "24 Seven",
+                min: "15 Mins",
+                icon: faRoad
+            },
+            {
+                title: "Ambala Road",
+                min: "5 Mins",
+                icon: faRoad
+            },
+            {
+                title: "Chandigarh Railway Station",
+                min: "20 Mins",
+                icon: trainIcon,
+                img: true,
+            }
         ]
     },
     {
@@ -99,30 +103,30 @@ const connectivityData = [
         id:"entertainment",
         data: [
             {
-                        title: "Elante Mall",
-                        min: "15 Mins",
-                        icon: faMapMarkerAlt
-                    },
-                    {
-                        title: "Radisson Hotel",
-                        min: "01 Min",
-                        icon: faMapMarkerAlt
-                    },
-                    {
-                        title: "Walmart",
-                        min: "10 Mins",
-                        icon: faMapMarkerAlt
-                    },
-                    {
-                        title: "HLP Social Square",
-                        min: "01 Min",
-                        icon: faMapMarkerAlt
-                    },
-                    {
-                        title: "D-Mart",
-                        min: "5 Mins",
-                        icon: faMapMarkerAlt
-                    }
+                title: "Elante Mall",
+                min: "15 Mins",
+                icon: faMapMarkerAlt
+            },
+            {
+                title: "Radisson Hotel",
+                min: "01 Min",
+                icon: faMapMarkerAlt
+            },
+            {
+                title: "Walmart",
+                min: "10 Mins",
+                icon: faMapMarkerAlt
+            },
+            {
+                title: "HLP Social Square",
+                min: "01 Min",
+                icon: faMapMarkerAlt
+            },
+            {
+                title: "D-Mart",
+                min: "5 Mins",
+                icon: faMapMarkerAlt
+            }
         ]
     }
 ]
@@ -146,7 +150,11 @@ const ProjectConnectivity = () => {
                                         <div className="connectivity_data_grid">
                                             {item.data.map((list,index) => (
                                                 <div className="connectivity_data_item" key={index}>
-                                                    <FontAwesomeIcon icon={list.icon} className="connectivity_data_icon"/>
+                                                    {list.img ? 
+                                                        <img src={list.icon} alt={list.title} className="connectivity_data_icon" />
+                                                    :
+                                                        <FontAwesomeIcon icon={list.icon} className="connectivity_data_icon"/>
+                                                    }
                                                     <div className="connectivity_data">
                                                         <p className="connectivity_data_title mb-3">{list.title}</p>
                                                         <p className="connectivity_data_title">{list.min}</p>

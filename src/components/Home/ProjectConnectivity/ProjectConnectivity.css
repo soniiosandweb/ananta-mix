@@ -70,9 +70,14 @@
     display: flex;
     gap: 10px;
     color: var(--color-white);
+    align-items: start;
 }
 .connectivity_data_item .connectivity_data_icon {
     font-size: 36px;
+}
+.connectivity_data_item img.connectivity_data_icon {
+    width: 36px;
+    object-fit: contain;
 }
 .connectivity_data_item .connectivity_data_title {
     font-size: 18px;
@@ -96,6 +101,9 @@
     }
     .connectivity_data_item .connectivity_data_icon {
         font-size: 30px;
+    }
+    .connectivity_data_item img.connectivity_data_icon {
+        width: 30px;
     }
     .connectivity_accordion .accordion-button {
         font-size: 20px;
@@ -121,5 +129,8 @@
 @media (max-width: 420px) {
     .connectivity_data_item .connectivity_data_icon {
         font-size: 20px;
+    }
+    .connectivity_data_item img.connectivity_data_icon {
+        width: 20px;
     }
 }

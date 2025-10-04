@@ -19,7 +19,7 @@
     flex-direction: column;
 }
 .contact_us_content .contact_us_content_text {
-    background-color: rgb(255 255 255 / 42%);
+    background-color: #ffffffad;
     padding: 2.5rem;
     border-radius: 0 0 250px 250px;
     margin: 0 auto;
@@ -85,7 +85,6 @@
     margin-top: 1rem !important;
     font-size: 14px;
     color: var(--color-gray);
-    max-width: 544px;
 }
 .contact_section_form input.checkbox {
     background-color: var(--color-transparent) !important;
@@ -171,6 +170,7 @@
     }
     .contact_us_content .contact_us_content_text {
         padding: 1rem;
+        min-height: 280px;
     }
     .contact_section_form {
         padding: 2rem 1rem;

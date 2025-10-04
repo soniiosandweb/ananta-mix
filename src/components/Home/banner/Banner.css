@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 .banner_slider_item::after {
     background: linear-gradient(270deg, rgba(66, 31, 18, 0) -2.62%, rgba(55, 25, 3, 0.65) 52.67%);
