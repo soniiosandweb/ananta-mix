@@ -88,14 +88,14 @@
     /* margin-top: -2px; */
 }
 .banner_slider_heading {
-    font-size: 35px;
-    line-height: 37px;
+    font-size: 38px;
+    line-height: 42px;
     font-weight: 700;
     font-family: var(--font-bold);
 }
 .banner_slider_subtext {
-    font-size: 25px;
-    line-height: 27px;
+    font-size: 26px;
+    line-height: 28px;
     font-weight: 500;
     font-family: var(--font-medium);
 }
@@ -120,7 +120,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 27px;
     font-weight: 500;
     font-family: var(--font-medium);
