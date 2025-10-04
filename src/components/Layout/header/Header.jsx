@@ -15,7 +15,7 @@ import carIcon from "../../../assests/images/car.png";
 import moneyIcon from "../../../assests/images/money.png";
 import checkIcon from "../../../assests/images/check.png";
 import whatsappIcon from "../../../assests/images/whatsapp.png";
-import downloadIcon from "../../../assests/images/download.png";
+// import downloadIcon from "../../../assests/images/download.png";
 
 const promiseContent = [
   {
@@ -269,7 +269,7 @@ console.log(id,'click')
             {/* <div className='sticky h-0 z-20' style={{ top: "45%" }}><button tabIndex='-1' className="w-max text-xs font-medium capitalize cursor-pointer bg-primary-brown p-2 sm:p-2.5 rounded-md text-white absolute -rotate-90 download-broucher-btn" style={{ right: "-46px" }} onClick={handleOpen}>Download Brochure</button>
             </div> */}
             <div className="fixed_btns_header z-20">
-              <img src={downloadIcon} alt="Download" className="header_btns_float download" onClick={handleOpen} />
+              {/* <img src={downloadIcon} alt="Download" className="header_btns_float download" onClick={handleOpen} /> */}
               <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
                 <img src={whatsappIcon} alt="Whatsapp" className="header_btns_float whatsapp" />
               </a>

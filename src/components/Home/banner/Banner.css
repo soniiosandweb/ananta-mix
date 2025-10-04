@@ -110,7 +110,7 @@
     gap: 10px;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 480px;
+    max-width: 430px;
 }
 .banner_slider_lists_item {
     display: flex;
@@ -120,7 +120,7 @@
     line-height: 27px;
     font-weight: 500;
     font-family: var(--font-medium);
-    width: 40%;
+    width: 45%;
 }
 .banner_slider_lists_item img {
     width: 20px;
@@ -144,7 +144,7 @@
         font-size: 18px;
     }
     .banner_slider_icons_lists {
-        max-width: 550px;
+        max-width: 500px;
     }
     .banner_slider_text_block {
         max-width: 80%;
@@ -213,6 +213,9 @@
         width: 16px;
         height: 16px;
         object-fit: contain;
+    }
+    .banner_slider_icons_lists {
+        justify-content: start;
     }
 }
 @media (max-width: 575px) {
