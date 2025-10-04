@@ -1,6 +1,6 @@
 .contact_us_section .contact_us_flex {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
 }
 .contact_us_left_col {
@@ -15,13 +15,155 @@
     border: 7px solid var(--color-brown);
     border-radius: 250px;
     display: flex;
-    align-items: end;
+    justify-content: end;
     flex-direction: column;
 }
 .contact_us_content .contact_us_content_text {
-    
+    background-color: rgb(255 255 255 / 42%);
+    padding: 3rem;
+    border-radius: 0 0 250px 250px;
+    margin: 0 auto;
+    min-height: 369px;
+}
+.contact_us_content .contact_us_content_text .contact_form_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+.contact_us_content .contact_us_content_text .contact_form_text a {
+    margin-top: 2rem;
+    display: block;
+    text-decoration: underline;
+}
+.contact_us_content .contact_us_content_text .contact_form_text a:hover {
+    color: var(--color-old-brown);
 }
 .contact_us_right_col {
     width: 100%;
     flex: 1;
+}
+.contact_section_form {
+    background-color: #E3E3E3;
+    border: 0.5px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 2rem 3rem;
+}
+.contact_section_form h5 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.contact_section_form input {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 30px !important;
+    height: auto;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px;
+    background-color: var(--color-transparent) !important;
+    color: var(--color-black);
+}
+.contact_section_form input::placeholder {
+    color: var(--color-black);
+}
+.contact_section_form .PhoneInput {
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px;
+    background-color: var(--color-transparent) !important;
+    padding: 12px 30px !important;
+}
+.contact_section_form .PhoneInput input {
+    border: none !important;
+    border-radius: 0px;
+    padding: 0 10px !important;
+}
+.contact_section_form .checkbox_div {
+    margin-top: 1rem !important;
+    font-size: 14px;
+    color: var(--color-gray);
+    max-width: 544px;
+}
+.contact_section_form input.checkbox {
+    background-color: var(--color-transparent) !important;
+}
+.contact_section_form .submit_btn {
+    background-color: var(--color-old-brown) !important;
+    color: var(--color-white);
+    width: 100%;
+    text-transform: capitalize;
+    padding: 16px 20px !important;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid var(--color-old-brown) !important;
+    margin-top: 2rem;
+}
+.contact_section_form .submit_btn:hover {
+    background-color: var(--color-btn-bg) !important;
+    color: var(--color-black) !important;
+}
+@media (max-width: 1199px) {
+    .contact_us_section .contact_us_flex {
+        gap: 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .contact_us_section .contact_us_flex {
+        gap: 1rem;
+    }
+    .contact_us_left_col {
+        flex: 0 0 320px;
+        max-width: 320px;
+    }
+    .contact_us_content {
+        min-height: 650px;
+    }
+    .contact_us_content .contact_us_content_text {
+        padding: 1rem;
+        min-height: 300px;
+    }
+    .contact_us_content .contact_us_content_text .contact_form_text {
+        font-size: 16px;
+    }
+    .contact_section_form {
+        padding: 2rem;
+    }
+}
+@media (max-width: 767px) {
+    .contact_us_section .contact_us_flex {
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .contact_us_left_col {
+        flex: 0 0 350px;
+        max-width: 350px;
+    }
+    .contact_us_content {
+        min-height: 510px;
+    }
+    .contact_us_content .contact_us_content_text {
+        padding: 2rem;
+    }
+    .contact_section_form h5 {
+        font-size: 20px;
+    }
+    .contact_section_form input {
+        font-size: 16px;
+        padding: 10px 20px !important;
+    }
+    .contact_section_form .submit_btn {
+        padding: 14px 20px !important;
+    }
+}
+@media (max-width: 480px) {
+    .contact_us_left_col {
+        flex: 1;
+        max-width: 350px;
+        width: 100%;
+    }
+    .contact_us_content .contact_us_content_text {
+        padding: 1rem;
+    }
+    .contact_section_form {
+        padding: 2rem 1rem;
+    }
 }

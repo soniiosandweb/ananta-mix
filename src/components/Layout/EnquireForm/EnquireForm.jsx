@@ -223,10 +223,10 @@ const EnquireForm = ({ title, setOpen, button }) => {
                         )}
                     </div>
 
-                    <p className={`flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}><input type='checkbox' required className='align-middle size-4' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span></p>
+                    <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}><input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span></p>
 
                     <div className="mt-2.5 text-center flex items-center gap-5 justify-center">
-                        <input type="submit" value={button ? button : 'Download Now'} className={`font-bold uppercase text-xs  py-2.5 sm:pb-3.5 sm:pt-[15px] px-3.5 sm:px-[22px] 1xl:px-8 rounded-md text-primary-brown  bg-white border-2 border-primary-brown hover:bg-primary-brown hover:text-white cursor-pointer`} />
+                        <input type="submit" value={button ? button : 'Download Now'} className={`submit_btn font-bold uppercase text-xs  py-2.5 sm:pb-3.5 sm:pt-[15px] px-3.5 sm:px-[22px] 1xl:px-8 rounded-md text-primary-brown  bg-white border-2 border-primary-brown hover:bg-primary-brown hover:text-white cursor-pointer`} />
 
 
                         {loading && (
