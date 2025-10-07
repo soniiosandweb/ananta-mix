@@ -4,10 +4,11 @@ import PhoneInput, { isPossiblePhoneNumber, isValidPhoneNumber } from "react-pho
 import { useState } from 'react';
 import axios from 'axios';
 import { CircularProgress } from '@mui/material';
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-const EnquireForm = ({ title, setOpen, button }) => {
+const EnquireForm = ({ title, setOpen, button, formId }) => {
     const [formVisible, setFormVisible] = useState(true);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,20 +19,8 @@ const EnquireForm = ({ title, setOpen, button }) => {
     const [formSuccess, setFormSuccess] = useState("");
     const [formError, setFormError] = useState("");
     const [loading, setLoading] = useState(false);
-    // const [disableSubmit, setDisableSubmit] = useState(true);
-    // const [number, setNumber] = useState();
-
-
-    //const validateForm = () => name.length >= 1 && mobileNumber.length === 10 && termsValue;
-    // const checkInput = (e) =>{
-    //     if(!(e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode === 8)){
-    //         e.preventDefault()
-    //     }
-    //     else{
-    //         setNumber(e.target.value)
-    //     }
-
-    // }
+    const [priceRange, setPriceRange] = useState("");
+    console.log(priceRange)
 
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
@@ -58,6 +47,7 @@ const EnquireForm = ({ title, setOpen, button }) => {
                 name: name,
                 mobileNumber: mobileNumber,
                 email: email,
+                price: priceRange,
             }),
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
         })
@@ -112,12 +102,6 @@ const EnquireForm = ({ title, setOpen, button }) => {
     const EmailChange = (e) => {
 
         setEmail(e.target.value);
-
-        // if(name.length >= 1 && mobileNumber !== undefined && termsValue === true){
-        //     setDisableSubmit(false);
-        // } else {
-        //     setDisableSubmit(true);
-        // }
     }
 
     const NameChange = (e) => {
@@ -127,31 +111,11 @@ const EnquireForm = ({ title, setOpen, button }) => {
         const filteredValue = value.replace(/[^a-zA-Z\s]/g, '');
         setName(filteredValue);
 
-        // if(e.target.value.length >= 1 && mobileNumber !== undefined && termsValue === true){
-        //     setDisableSubmit(false);
-        // } else {
-        //     setDisableSubmit(true);
-        // }
     }
-    // const NumberChange = (e) => {
-
-    //     setNumber(e.target.value);
-
-    //     if(name.length >= 1 && mobileNumber !== undefined && termsValue === true){
-    //         setDisableSubmit(false);
-    //     } else {
-    //         setDisableSubmit(true);
-    //     }
-    // }
     const CheckboxChange = (e) => {
 
         setTermsValue(!termsValue);
         setTermsCheck(!termsValue);
-        // if(name.length >= 1 && mobileNumber !== undefined &&  !termsValue === true){
-        //     setDisableSubmit(false);
-        // } else {
-        //     setDisableSubmit(true);
-        // }
     }
 
     const resetForm = () => {
@@ -221,6 +185,26 @@ const EnquireForm = ({ title, setOpen, button }) => {
                         {phoneError && (
                             <p className="text-red-400 text-sm">{phoneError}</p>
                         )}
+                    </div>
+
+                    <div className="py-2 form-row">
+                        <p className='form_label'>Price Range</p>
+
+                        <ToggleButtonGroup name={`price_range_${formId}`} className='price_range_group' type="radio" value={priceRange} onChange={(val) => setPriceRange(val)}>
+                            <ToggleButton id={`${formId+"_1"}`} value={"1.5 Cr to 2 Cr"} className={`${priceRange === "1.5 Cr to 2 Cr" && 'active'}`}>
+                                1.5 Cr to 2 Cr
+                            </ToggleButton>
+                            <ToggleButton id={`${formId+"_2"}`} value={"2 Cr to 2.5 Cr"}>
+                                2 Cr to 2.5 Cr
+                            </ToggleButton>
+                            <ToggleButton id={`${formId+"_3"}`} value={"2.5 Cr to 3 Cr"}>
+                                2.5 Cr to 3 Cr
+                            </ToggleButton>
+                            <ToggleButton id={`${formId+"_4"}`} value={"3 Cr to 3.5 Cr"}>
+                                3 Cr to 3.5 Cr
+                            </ToggleButton>
+                        </ToggleButtonGroup>
+
                     </div>
 
                     <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}>

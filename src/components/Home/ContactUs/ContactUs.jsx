@@ -20,7 +20,7 @@ const ContactUs = () => {
                             </div>
                             <div className="contact_us_right_col">
                                 <div className="contact_section_form">
-                                    <EnquireForm title="Connect With Our Team" />
+                                    <EnquireForm title="Connect With Our Team" formId={"contact"} />
                                 </div>
                             </div>
                         </div>

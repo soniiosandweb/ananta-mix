@@ -301,7 +301,7 @@ console.log(id,'click')
                   <div className="flex justify-end btn-icon">
                     <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
                   </div>
-                  <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                  <EnquireForm formId={"brochure"} title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
                 </div>
               </Dialog>
 
@@ -334,7 +334,7 @@ console.log(id,'click')
                   </div>
                 </div>
                 <div className="price_list_form_col">
-                  <EnquireForm title="Ananta Aspire Price List" button="Check Latest Pricing" />
+                  <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                 </div>
               </div>
                 

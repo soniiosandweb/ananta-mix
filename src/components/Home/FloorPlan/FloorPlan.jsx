@@ -205,7 +205,7 @@ const FloorPlan = () => {
                                   <div className="flex justify-end btn-icon">
                                     <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
                                   </div>
-                                  <EnquireForm title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                                  <EnquireForm formId={"floor"} title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
                                 </div>
                               </Dialog>
         </>
