@@ -145,6 +145,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         setEmail('');
         setTermsValue(false);
         setTermsCheck(false);
+        setPriceRange('');
     }
 
     return (

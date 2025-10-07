@@ -197,12 +197,19 @@ span.thanku-txt {
     .enquire-form .submit_btn {
         padding: 10px 20px !important;
     }
+    .popup-form .enquire-form {
+        padding-bottom: 10px;
+    }
 }
 @media (max-width: 480px) {
     .css-19eiqil-MuiModal-root-MuiDialog-root .MuiDialog-container .MuiPaper-root {
         padding: 15px 10px !important;
     }
     .enquire-form .checkbox_div {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    .price_range_group .btn {
+        min-width: auto;
+        font-size: 11px;
     }
 }
