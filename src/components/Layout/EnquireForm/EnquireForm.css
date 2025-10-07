@@ -105,6 +105,11 @@ span.thanku-txt {
     background-color: #FFFDFDAB !important;
     color: var(--color-black) !important;
 }
+.enquire-form .error {
+    color: #ff3838 !important;
+    font-weight: 600;
+    font-family: var(--font-semibold);
+}
 .enquire-form .form-row {
     padding: 5px 0 !important;
 }

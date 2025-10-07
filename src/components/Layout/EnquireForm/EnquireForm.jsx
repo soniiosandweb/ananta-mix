@@ -16,11 +16,12 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
     const [termsCheck, setTermsCheck] = useState(false);
     const [mobileNumber, setMobileNumber] = useState();
     const [phoneError, setPhoneError] = useState("");
+    const [priceError, setPriceError] = useState("");
     const [formSuccess, setFormSuccess] = useState("");
     const [formError, setFormError] = useState("");
     const [loading, setLoading] = useState(false);
     const [priceRange, setPriceRange] = useState("");
-    console.log(priceRange)
+    const [termsError, setTermsError] = useState("");
 
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
@@ -35,6 +36,26 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
 
                 return false;
             }
+        }
+
+        if(!priceRange) {
+            setPriceError("Please Enter Price Range.");
+
+            setTimeout(() => {
+                setPriceError('');
+            }, 5000);
+
+            return false;
+        }
+
+        if(!termsError) {
+            setTermsError("Please select checkbox.");
+
+            setTimeout(() => {
+                setTermsError('');
+            }, 5000);
+
+            return false;
         }
 
         // setDisableSubmit(true);
@@ -130,7 +151,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         <form className="enquire-form py-6" id='enquiry-form' onSubmit={handleSubmit}>
              <div className={`form-section text-left ${formSuccess ? 'form-success' : ''}`}>
                 {formError && (
-                    <p className="text-red-400 py-2  text-[12px] text-center">{formError}</p>
+                    <p className="text-red-500 py-2 error text-[12px] text-center">{formError}</p>
                 )}
 
                 {formSuccess && (
@@ -183,7 +204,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                             international={false}
                         />
                         {phoneError && (
-                            <p className="text-red-400 text-sm">{phoneError}</p>
+                            <p className="text-red-400 error text-sm">{phoneError}</p>
                         )}
                     </div>
 
@@ -204,7 +225,9 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                                 3 Cr to 3.5 Cr
                             </ToggleButton>
                         </ToggleButtonGroup>
-
+                        {priceError && (
+                            <p className="text-red-700 error text-sm">{priceError}</p>
+                        )}
                     </div>
 
                     <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}>
@@ -212,11 +235,16 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                         
 
                         <label className="custom-checkbox">
-                            <input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> 
+                            <input type='checkbox' className='align-middle size-4 checkbox' name={`termsCheck_${formId}`} checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} /> 
                             <span className="checkmark"></span>
                         </label>
                         <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span>
+
+                        
                     </p>
+                    {termsError && (
+                        <p className="text-red-700 error text-sm">{termsError}</p>
+                    )}
 
                     <div className="mt-2.5 text-center flex items-center gap-5 justify-center">
                         <input type="submit" value={button ? button : 'Download Now'} className={`submit_btn font-bold uppercase text-xs  py-2.5 sm:pb-3.5 sm:pt-[15px] px-3.5 sm:px-[22px] 1xl:px-8 rounded-md text-primary-brown  bg-white border-2 border-primary-brown hover:bg-primary-brown hover:text-white cursor-pointer`} />
