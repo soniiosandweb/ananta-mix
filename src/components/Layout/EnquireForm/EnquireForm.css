@@ -214,11 +214,7 @@ span.thanku-txt {
     font-weight: 500;
     font-family: var(--font-medium);
 }
-@media (min-width: 1500px) and (min-height: 750px) {
-    .we_get_div_grid .we_get_div_item .we_get_text {
-        font-size: 11px;
-    }
-}
+
 @media (max-width: 767px) {
     .enquire-form h5 {
         font-size: 20px;

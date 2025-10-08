@@ -507,13 +507,13 @@
 }
 @media (min-width: 1600px) {
     .side-popup-form {
-        max-width: 644px;
+        max-width: 600px;
     }
     .price_list_form_flex .price_list_left_col {
         flex: 0 0 190px;
     }
     .price_list_form_col .price_range_group .btn {
-        min-width: 190px;
+        min-width: 170px;
     }
     .price_list_heading_block .price_list_heading {
         font-size: 28px;
