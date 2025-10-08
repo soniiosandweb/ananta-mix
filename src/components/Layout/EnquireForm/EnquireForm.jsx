@@ -210,7 +210,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                     </div>
 
                     <div className="py-2 form-row">
-                        <p className='form_label'>Price Range</p>
+                        <p className='form_label'>Select Your Budget</p>
 
                         <ToggleButtonGroup name={`price_range_${formId}`} className='price_range_group' type="radio" value={priceRange} onChange={(val) => setPriceRange(val)}>
                             <ToggleButton id={`${formId+"_1"}`} value={"1 Cr to 1.3 Cr"} className={`${priceRange === "1 Cr to 1.3 Cr" && 'active'}`}>
