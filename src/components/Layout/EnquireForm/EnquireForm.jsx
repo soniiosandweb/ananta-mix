@@ -20,7 +20,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
     const [formSuccess, setFormSuccess] = useState("");
     const [formError, setFormError] = useState("");
     const [loading, setLoading] = useState(false);
-    const [priceRange, setPriceRange] = useState("");
+    const [priceRange, setPriceRange] = useState("1 Cr to 1.3 Cr");
     const [termsError, setTermsError] = useState("");
 
     const handleSubmit = (event) => {
@@ -145,7 +145,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         setEmail('');
         setTermsValue(false);
         setTermsCheck(false);
-        setPriceRange('');
+        setPriceRange('1 Cr to 1.3 Cr');
     }
 
     return (
@@ -213,17 +213,17 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                         <p className='form_label'>Price Range</p>
 
                         <ToggleButtonGroup name={`price_range_${formId}`} className='price_range_group' type="radio" value={priceRange} onChange={(val) => setPriceRange(val)}>
-                            <ToggleButton id={`${formId+"_1"}`} value={"1.5 Cr to 2 Cr"} className={`${priceRange === "1.5 Cr to 2 Cr" && 'active'}`}>
-                                1.5 Cr to 2 Cr
+                            <ToggleButton id={`${formId+"_1"}`} value={"1 Cr to 1.3 Cr"} className={`${priceRange === "1 Cr to 1.3 Cr" && 'active'}`}>
+                                1 Cr to 1.3 Cr
                             </ToggleButton>
-                            <ToggleButton id={`${formId+"_2"}`} value={"2 Cr to 2.5 Cr"}>
-                                2 Cr to 2.5 Cr
+                            <ToggleButton id={`${formId+"_2"}`} value={"1.3 Cr to 1.7 Cr"}>
+                                1.3 Cr to 1.7 Cr
                             </ToggleButton>
-                            <ToggleButton id={`${formId+"_3"}`} value={"2.5 Cr to 3 Cr"}>
-                                2.5 Cr to 3 Cr
+                            <ToggleButton id={`${formId+"_3"}`} value={"1.7 Cr to 2 Cr"}>
+                                1.7 Cr to 2 Cr
                             </ToggleButton>
-                            <ToggleButton id={`${formId+"_4"}`} value={"3 Cr to 3.5 Cr"}>
-                                3 Cr to 3.5 Cr
+                            <ToggleButton id={`${formId+"_4"}`} value={"2 Cr Onwards"}>
+                                2 Cr Onwards
                             </ToggleButton>
                         </ToggleButtonGroup>
                         {priceError && (
