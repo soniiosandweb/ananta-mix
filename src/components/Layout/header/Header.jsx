@@ -10,42 +10,42 @@ import { Container, Navbar, Nav, Offcanvas, Button } from "react-bootstrap";
 import { Dialog } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import instantCall from "../../../assests/images/support-services.png";
-import carIcon from "../../../assests/images/car.png";
-import moneyIcon from "../../../assests/images/money.png";
-import checkIcon from "../../../assests/images/check.png";
+// import instantCall from "../../../assests/images/support-services.png";
+// import carIcon from "../../../assests/images/car.png";
+// import moneyIcon from "../../../assests/images/money.png";
+// import checkIcon from "../../../assests/images/check.png";
 import whatsappIcon from "../../../assests/images/whatsapp.png";
 // import downloadIcon from "../../../assests/images/download.png";
 
-const promiseContent = [
-  {
-    icon: instantCall,
-    text: "Instant Call Back",
-  },
-  {
-    icon: carIcon,
-    text: "Free Site Visit",
-  },
-  {
-    icon: moneyIcon,
-    text: "Unmatched Price",
-  }
-]
+// const promiseContent = [
+//   {
+//     icon: instantCall,
+//     text: "Instant Call Back",
+//   },
+//   {
+//     icon: carIcon,
+//     text: "Free Site Visit",
+//   },
+//   {
+//     icon: moneyIcon,
+//     text: "Unmatched Price",
+//   }
+// ]
 
-const informationContent = [
-  {
-    icon: checkIcon,
-    text: "Available Units",
-  },
-  {
-    icon: checkIcon,
-    text: "Payment Plan",
-  },
-  {
-    icon: checkIcon,
-    text: "Floor Plan",
-  }
-]
+// const informationContent = [
+//   {
+//     icon: checkIcon,
+//     text: "Available Units",
+//   },
+//   {
+//     icon: checkIcon,
+//     text: "Payment Plan",
+//   },
+//   {
+//     icon: checkIcon,
+//     text: "Floor Plan",
+//   }
+// ]
 
 const Header = () => {
 
@@ -289,30 +289,30 @@ console.log(id,'click')
                       borderRadius: "8px",
                       borderColor:'#fff',
                       // border: '4px solid #8f6445',
-                      backgroundColor: "#8F6445E5",
+                      backgroundColor: "#fff",
                       padding: "15px",
-                      boxShadow: '0px 0px 4px 0px #0000001A'
+                      boxShadow: '0px 0px 4px 0px #644630'
                     },
                   },
                 }}
                 aria-modal="true"
               >
-                <div className="flex flex-col px-2.5 popup-form ">
+                <div className="flex flex-col popup-form ">
                   <div className="flex justify-end btn-icon">
                     <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
                   </div>
-                  <EnquireForm formId={"brochure"} title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                  <EnquireForm formId={"brochure"} title="Fill in your details to get Broucher" button="Submit Now" setOpen={setOpen} />
                 </div>
               </Dialog>
 
             {/* Price List Form */}
             <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
               <div className="price_list_heading_block">
-                <p className="price_list_heading">Ananta Aspire Exclusive  Price List</p>
+                <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
                 <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
               </div>
               <div className="price_list_form_flex">
-                <div className="price_list_left_col">
+                {/* <div className="price_list_left_col">
                   <p className="price_list_subheading">We Promise</p>
                   <div className="price_lists_form_items">
                     {promiseContent.map((item,i) => (
@@ -332,7 +332,9 @@ console.log(id,'click')
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
+                <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
+                <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
                 <div className="price_list_form_col">
                   <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                 </div>

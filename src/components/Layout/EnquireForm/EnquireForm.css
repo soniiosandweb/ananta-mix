@@ -1,6 +1,6 @@
 .form-input:focus {
-    box-shadow: 0 0 0 1px #8F6445, 0px 1px 2px rgba(0, 0, 0, 0.15);
-    border-color: #8F6445;
+    /* box-shadow: 0 0 0 1px #8F6445, 0px 1px 2px rgba(0, 0, 0, 0.15); */
+    border-color: #8F6445 !important;
 }
 
 /* .PhoneInputCountry {
@@ -36,9 +36,6 @@ span.thanku-txt {
 .css-19eiqil-MuiModal-root-MuiDialog-root .MuiDialog-container .MuiPaper-root {
     margin: 15px;
 }
-.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
-    background-color: var(--color-transparent) !important;
-}
 .PhoneInputCountrySelectArrow {
     opacity: 1 !important;
     --PhoneInputCountrySelectArrow-color: var(--color-black) !important;
@@ -47,30 +44,31 @@ span.thanku-txt {
     margin-right: 5px;
 }
 .enquire-form h5 {
-    font-size: 25px;
-    color: var(--color-white);
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-old-brown);
     font-weight: 600;
     font-family: var(--font-semibold);
 }
 .enquire-form input {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     font-family: var(--font-medium);
-    padding: 8px 20px !important;
+    padding: 10px 20px !important;
     height: auto;
-    border: 1px solid var(--color-white) !important;
+    border: 1px solid #A3A1A1 !important;
     border-radius: 8px;
-    background-color: #FFFDFDAB !important;
+    background-color: var(--color-transparent) !important;
     color: var(--color-black);
 }
 .enquire-form input::placeholder {
-    color: var(--color-black);
+    color: #686868;
 }
 .enquire-form .PhoneInput {
-    border: 1px solid var(--color-white) !important;
+    border: 1px solid #A3A1A1 !important;
     border-radius: 8px;
-    background-color: #FFFDFDAB !important;
-    padding: 12px 30px !important;
+    background-color: var(--color-transparent) !important;
+    padding: 10px 30px !important;
 }
 .enquire-form .PhoneInput input {
     border: none !important;
@@ -80,8 +78,8 @@ span.thanku-txt {
 }
 .enquire-form .checkbox_div {
     margin-top: 0.5rem !important;
-    font-size: 14px;
-    color: var(--color-white);
+    font-size: 12px;
+    color: #484747;
     align-items: start;
 }
 .enquire-form input.checkbox {
@@ -90,20 +88,20 @@ span.thanku-txt {
     border: 1px solid var(--color-white) !important;
 }
 .enquire-form .submit_btn {
-    background-color: var(--color-transparent) !important;
+    background-color: var(--color-old-brown) !important;
     color: var(--color-white);
-    width: 100%;
-    text-transform: uppercase;
-    padding: 16px 20px !important;
-    font-size: 18px;
+    width: max-content;
+    text-transform: capitalize;
+    padding: 12px 20px !important;
+    font-size: 16px;
     font-weight: 500;
     font-family: var(--font-medium);
-    border: 1px solid var(--color-white) !important;
+    border: 1px solid var(--color-old-brown) !important;
     margin-top: 1rem;
 }
 .enquire-form .submit_btn:hover {
-    background-color: #FFFDFDAB !important;
-    color: var(--color-black) !important;
+    background-color: var(--color-white) !important;
+    color: var(--color-old-brown) !important;
 }
 .enquire-form .error {
     color: #ff3838 !important;
@@ -114,57 +112,65 @@ span.thanku-txt {
     padding: 5px 0 !important;
 }
 .popup-form svg {
-    color: var(--color-white);
+    color: var(--color-old-brown);
+}
+.enquire-form .form-row-flex {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+}
+.enquire-form .form-row-flex .form-row {
+    width: 100%;
 }
 .custom-checkbox input {
   display: none;
 }
 .enquire-form .form_label {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     font-family: var(--font-semibold);
-    color: var(--color-white);
-    margin-bottom: 10px;
+    color: var(--color-old-brown);
+    margin-bottom: 5px;
 }
 .price_range_group {
     flex-wrap: wrap;
     gap: 10px;
 }
 .price_range_group .btn {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 14px;
     font-weight: 500;
     font-family: var(--font-medium);
-    color: #FFFFFF;
+    color: #686868;
     background-color: var(--color-transparent);
-    border: 0.5px solid #FFFFFF !important;
+    border: 0.5px solid #A3A1A1 !important;
     border-radius: 4px !important;
     width: auto;
     flex: unset;
-    min-width: 110px;
+    min-width: 124px;
+    padding: 10px;
 }
 .price_range_group .btn-check:checked+.btn,
 .price_range_group .btn:active,
 .price_range_group .btn:hover {
-    background-color: #CCC0B9;
-    color: #644630;
+    background-color: var(--color-old-brown);
+    color: var(--color-white);
 }
 .custom-checkbox .checkmark {
   width: 18px;
   height: 18px;
-  border: 1px solid var(--color-white);
+  border: 1px solid #686868;
   border-radius: 4px;
   background: var(--color-transparent);
   position: relative;
   display: inline-block;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin: 3px 5px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .custom-checkbox input:checked + .checkmark {
-  background: #FFFDFDAB;
-  border-color: #FFFDFDAB;
+  border-color: #686868;
 }
 
 /* Check icon */
@@ -185,6 +191,34 @@ span.thanku-txt {
   display: block;
   border-color: var(--color-black);
 }
+.we_get_div_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+.we_get_div_grid .we_get_div_item {
+    display: flex; 
+    gap: 5px;
+    align-items: center;
+}
+.we_get_div_grid .we_get_div_item .we_get_icon{
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+.we_get_div_grid .we_get_div_item .we_get_text {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: var(--font-medium);
+}
+@media (min-width: 1500px) and (min-height: 750px) {
+    .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 11px;
+    }
+}
 @media (max-width: 767px) {
     .enquire-form h5 {
         font-size: 20px;
@@ -192,10 +226,10 @@ span.thanku-txt {
     .enquire-form input,
     .enquire-form .PhoneInput {
         font-size: 14px;
-        padding: 7px 20px !important;
+        padding: 8px 15px !important;
     }
     .enquire-form .submit_btn {
-        padding: 10px 20px !important;
+        padding: 9px 15px !important;
     }
     .popup-form .enquire-form {
         padding-bottom: 10px;
@@ -208,8 +242,15 @@ span.thanku-txt {
     .enquire-form .checkbox_div {
         font-size: 11px;
     }
+    .price_range_group {
+        gap: 6px;
+    }
     .price_range_group .btn {
         min-width: auto;
         font-size: 11px;
+        padding: 5px 8px;
+    }
+    .enquire-form .form_label {
+        font-size: 18px;
     }
 }

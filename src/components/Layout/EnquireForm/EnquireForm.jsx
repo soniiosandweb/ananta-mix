@@ -5,8 +5,39 @@ import { useState } from 'react';
 import axios from 'axios';
 import { CircularProgress } from '@mui/material';
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import telephone from "../../../assests/images/telephone.png";
+import carIcon from "../../../assests/images/car-icon.png";
+import appIcon from "../../../assests/images/app-icon.png";
+import rupee from "../../../assests/images/rupee.png";
+import business from "../../../assests/images/businessman.png";
+import operator from "../../../assests/images/operator.png";
+
+const weGetOptions = [
+    {
+        icon: telephone,
+        text: "Free Site Visit with Pickup & Drop",
+    },
+    {
+        icon: carIcon,
+        text: "Quick Call Back by Our Expert Consultant",
+    },
+    {
+        icon: appIcon,
+        text: "Brochure, Floor Plans & Pricing on WhatsApp",
+    },
+    {
+        icon: rupee,
+        text: "Best Price Guarantee – Direct from Developer",
+    },
+    {
+        icon: business,
+        text: "Dedicated Luxury Property Advisor",
+    },
+    {
+        icon: operator,
+        text: "Assistance with Home Loans & Legal Formalities",
+    }
+]
 
 const EnquireForm = ({ title, setOpen, button, formId }) => {
     const [formVisible, setFormVisible] = useState(true);
@@ -20,7 +51,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
     const [formSuccess, setFormSuccess] = useState("");
     const [formError, setFormError] = useState("");
     const [loading, setLoading] = useState(false);
-    const [priceRange, setPriceRange] = useState("1 Cr to 1.3 Cr");
+    const [priceRange, setPriceRange] = useState("1 Cr to 1.5 Cr");
     const [termsError, setTermsError] = useState("");
 
     const handleSubmit = (event) => {
@@ -145,7 +176,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         setEmail('');
         setTermsValue(false);
         setTermsCheck(false);
-        setPriceRange('1 Cr to 1.3 Cr');
+        setPriceRange('1 Cr to 1.5 Cr');
     }
 
     return (
@@ -163,30 +194,33 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                 )}
                 {formVisible && (<div className='gap-2' id='enquiry-form'>
                     <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
-                    <div className="py-2 form-row">
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Name*"
-                            className="text-md form-input border border-gray-300 w-full px-3.5 py-2 bg-white"
-                            required
-                            value={name}
-                            onChange={(e) => NameChange(e)}
-                        />
-                    </div>
-                    <div className="py-2 form-row">
-                        <input
-                            type="text"
-                            id="email"
-                            name="email"
-                            placeholder="Email (Optional)"
-                            className="text-md form-input border border-gray-300 w-full px-3.5 py-2 bg-white"
+                    <div className='form-row-flex'>
+                        <div className="py-2 form-row">
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Name*"
+                                className="text-md form-input border border-gray-300 w-full px-3.5 py-2 bg-white"
+                                required
+                                value={name}
+                                onChange={(e) => NameChange(e)}
+                            />
+                        </div>
+                        <div className="py-2 form-row">
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                placeholder="Email (Optional)"
+                                className="text-md form-input border border-gray-300 w-full px-3.5 py-2 bg-white"
 
-                            value={email}
-                            onChange={(e) => EmailChange(e)}
-                        />
+                                value={email}
+                                onChange={(e) => EmailChange(e)}
+                            />
+                        </div>
                     </div>
+                    
                     <div className="py-2 form-row">
                         <PhoneInput
                             required
@@ -210,17 +244,14 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                     </div>
 
                     <div className="py-2 form-row">
-                        <p className='form_label'>Select Your Budget</p>
+                        <p className='form_label'>Select Budget*</p>
 
                         <ToggleButtonGroup name={`price_range_${formId}`} className='price_range_group' type="radio" value={priceRange} onChange={(val) => setPriceRange(val)}>
-                            <ToggleButton id={`${formId+"_1"}`} value={"1 Cr to 1.3 Cr"} className={`${priceRange === "1 Cr to 1.3 Cr" && 'active'}`}>
-                                1 Cr to 1.3 Cr
+                            <ToggleButton id={`${formId+"_1"}`} value={"1 Cr to 1.5 Cr"} className={`${priceRange === "1 Cr to 1.5 Cr" && 'active'}`}>
+                                1 Cr to 1.5 Cr
                             </ToggleButton>
-                            <ToggleButton id={`${formId+"_2"}`} value={"1.3 Cr to 1.7 Cr"}>
-                                1.3 Cr to 1.7 Cr
-                            </ToggleButton>
-                            <ToggleButton id={`${formId+"_3"}`} value={"1.7 Cr to 2 Cr"}>
-                                1.7 Cr to 2 Cr
+                            <ToggleButton id={`${formId+"_2"}`} value={"1.5 Cr to 2 Cr"}>
+                                1.5 Cr to 2 Cr
                             </ToggleButton>
                             <ToggleButton id={`${formId+"_4"}`} value={"2 Cr Onwards"}>
                                 2 Cr Onwards
@@ -230,6 +261,20 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                             <p className="text-red-700 error text-sm">{priceError}</p>
                         )}
                     </div>
+                    
+                    {formId && formId === "price" &&
+                        <div className="py-2 form-row">
+                            <p className='form_label'>What You Get</p>
+                            <div className='we_get_div_grid'>
+                                {weGetOptions.map((item,i) => (
+                                    <div className='we_get_div_item' key={i}>
+                                        <img src={item.icon} alt={item.text} className='we_get_icon' />
+                                        <p className='we_get_text'>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    }
 
                     <p className={`checkbox_div flex items-center text-[10px] mt-5 ${termsCheck ? 'font-semibold' : 'font-extralight  text-gray-400'}`}>
                         {/* <input type='checkbox' required className='align-middle size-4 checkbox' name="termsCheck" checked={termsCheck} value={termsValue} onChange={(e) => CheckboxChange(e)} />  */}
@@ -247,8 +292,8 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                         <p className="text-red-700 error text-sm">{termsError}</p>
                     )}
 
-                    <div className="mt-2.5 text-center flex items-center gap-5 justify-center">
-                        <input type="submit" value={button ? button : 'Download Now'} className={`submit_btn font-bold uppercase text-xs  py-2.5 sm:pb-3.5 sm:pt-[15px] px-3.5 sm:px-[22px] 1xl:px-8 rounded-md text-primary-brown  bg-white border-2 border-primary-brown hover:bg-primary-brown hover:text-white cursor-pointer`} />
+                    <div className="text-center flex items-center gap-5 justify-end">
+                        <input type="submit" value={button ? button : 'Download Now'} className={`submit_btn cursor-pointer`} />
 
 
                         {loading && (

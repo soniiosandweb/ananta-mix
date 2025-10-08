@@ -1,6 +1,6 @@
 import './Footer.css';
 import { NavLink } from 'react-router-dom';
-import logo from '../../../assests/images/logo-black.png';
+import logo from '../../../assests/images/logo.png';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";

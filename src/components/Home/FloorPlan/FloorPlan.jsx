@@ -193,19 +193,19 @@ const FloorPlan = () => {
                                         borderRadius: "8px",
                                         borderColor:'#fff',
                                         // border: '4px solid #8f6445',
-                                        backgroundColor: "#8F6445E5",
+                                        backgroundColor: "#fff",
                                         padding: "15px",
-                                        boxShadow: '0px 0px 4px 0px #0000001A'
+                                        boxShadow: '0px 0px 4px 0px #644630'
                                     },
                                   },
                                 }}
                                 aria-modal="true"
                               >
-                                <div className="flex flex-col px-2.5 popup-form ">
+                                <div className="flex flex-col popup-form ">
                                   <div className="flex justify-end btn-icon">
                                     <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={handleOpenClose} />
                                   </div>
-                                  <EnquireForm formId={"floor"} title="Request For Brochure" button="Submit Now" setOpen={setOpen} />
+                                  <EnquireForm formId={"floor"} title="Fill in your details to get Broucher" button="Submit Now" setOpen={setOpen} />
                                 </div>
                               </Dialog>
         </>
