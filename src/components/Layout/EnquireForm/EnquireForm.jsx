@@ -14,11 +14,11 @@ import operator from "../../../assests/images/operator.png";
 const weGetOptions = [
     {
         icon: telephone,
-        text: "Free Site Visit with Pickup & Drop",
+        text: "Quick Call Back by Our Expert Consultant",
     },
     {
         icon: carIcon,
-        text: "Quick Call Back by Our Expert Consultant",
+        text: "Free Site Visit with Pickup & Drop",
     },
     {
         icon: appIcon,
@@ -245,20 +245,6 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                         </ToggleButtonGroup>
                     </div>
                     
-                    {formId && formId === "price" &&
-                        <div className="py-2 form-row">
-                            <p className='form_label'>What You Get</p>
-                            <div className='we_get_div_grid'>
-                                {weGetOptions.map((item,i) => (
-                                    <div className='we_get_div_item' key={i}>
-                                        <img src={item.icon} alt={item.text} className='we_get_icon' />
-                                        <p className='we_get_text'>{item.text}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    }
-
                     <p className={`checkbox_div flex items-center text-[10px] mt-5 ${formData.terms ? 'font-semibold' : 'font-extralight  text-gray-400'}`}>
 
                         <label className="custom-checkbox">
@@ -283,6 +269,20 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                         <input type="submit" value={loading ? "Processing..." : button ? button : 'Download Now'} disabled={loading} className={`submit_btn cursor-pointer`} />
                       
                     </div>
+
+                    {formId && formId === "price" &&
+                        <div className="py-2 form-row we_get_row">
+                            <p className='form_label'>What You Get</p>
+                            <div className='we_get_div_grid'>
+                                {weGetOptions.map((item,i) => (
+                                    <div className='we_get_div_item' key={i}>
+                                        <img src={item.icon} alt={item.text} className='we_get_icon' />
+                                        <p className='we_get_text'>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    }
                 </div>
                 )}
             </div>

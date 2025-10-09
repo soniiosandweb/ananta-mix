@@ -305,42 +305,53 @@ console.log(id,'click')
                 </div>
               </Dialog>
 
-            {/* Price List Form */}
-            <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
-              <div className="price_list_heading_block">
-                <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
-                <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
-              </div>
-              <div className="price_list_form_flex">
-                {/* <div className="price_list_left_col">
-                  <p className="price_list_subheading">We Promise</p>
-                  <div className="price_lists_form_items">
-                    {promiseContent.map((item,i) => (
-                      <div className="price_lists_form_flex" key={i}>
-                        <img src={item.icon} className="icon_price" alt={item.text} />
-                        <p className="price_list_text">{item.text}</p>
-                      </div>
-                    ))}
+              <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
+                <div className="price_list_heading_block">
+                  <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
+                  <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
+                </div>
+                <div className="price_list_form_flex">
+                  <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
+                  <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
+                  <div className="price_list_form_col">
+                    <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                   </div>
-
-                  <p className="price_list_subheading mt-4">Get Informations </p>
-                  <div className="price_lists_form_items information_items">
-                    {informationContent.map((item,i) => (
-                      <div className="price_lists_form_flex" key={i}>
-                        <img src={item.icon} className="icon_price checkIcon" alt={item.text} />
-                        <p className="price_list_text">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div> */}
-                <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
-                <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
-                <div className="price_list_form_col">
-                  <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                 </div>
               </div>
-                
-            </div>
+
+          {/* Price List Popup */}
+          {/* <Dialog
+                open={showsidePopup}
+                onClose={newSidePopUpClose}
+                className="price_list_popup_dialog"
+                aria-hidden="false"
+                sx={{
+                  "& .MuiDialog-container": {
+                    "& .MuiPaper-root": {
+                      width: "100%",
+                      borderRadius: "8px",
+                      borderColor:'#fff',
+                      backgroundColor: "#fff",
+                      padding: "20px",
+                      boxShadow: '0px 0px 4px 0px #644630'
+                    },
+                  },
+                }}
+                aria-modal="true"
+              >
+                <div className="price_list_heading_block">
+                  <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
+                  <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
+                </div>
+                <div className="price_list_form_flex">
+                  <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
+                  <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
+                  <div className="price_list_form_col">
+                    <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
+                  </div>
+                </div>
+              </Dialog> */}
+
         </>
     )
 }

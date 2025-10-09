@@ -13,7 +13,7 @@ const ContactUs = () => {
                                 <div className="contact_us_content">
                                     <div className="contact_us_content_text">
                                         <p className="contact_form_text">Contact us today to schedule a visit to the luxury 3 & 4 BHK Apartments for sale in Zirakpur and experience The Ananta Aspire difference.</p>
-                                        <p className="contact_form_text">Contact us at:</p>
+                                        <p className="contact_form_text margin">Contact us at:</p>
                                         <p className="contact_form_text"><a href="mailto:contact@anantaaspirezirakpur.co">contact@anantaaspirezirakpur.co</a></p>
                                     </div>
                                 </div>

@@ -31,8 +31,10 @@
     font-family: var(--font-medium);
     color: var(--color-black);
 }
-.contact_us_content .contact_us_content_text .contact_form_text a {
+.contact_us_content .contact_us_content_text .contact_form_text.margin {
     margin-top: 2rem;
+}
+.contact_us_content .contact_us_content_text .contact_form_text a {
     display: block;
     text-decoration: underline;
 }
@@ -139,6 +141,13 @@
     .contact_us_section .contact_us_flex {
         gap: 2rem;
     }
+    .contact_section_form {
+        padding: 2rem;
+    }
+    .contact_section_form .price_range_group .btn {
+        font-size: 14px;
+        padding: 12px 6px;
+    }
 }
 @media (max-width: 991px) {
     .contact_us_section .contact_us_flex {
@@ -159,7 +168,7 @@
         font-size: 16px;
     }
     .contact_section_form {
-        padding: 2rem;
+        padding: 2rem 1rem;
     }
 }
 @media (max-width: 767px) {
@@ -193,7 +202,7 @@
     }
     .contact_section_form .price_range_group .btn {
         font-size: 14px;
-        padding: 8px 10px;
+        padding: 10px 10px;
     }
 }
 @media (max-width: 480px) {
@@ -211,5 +220,15 @@
     }
     .contact_us_content .contact_us_content_text .contact_form_text {
         font-size: 14px;
+    }
+    .contact_section_form .price_range_group .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+@media (max-width: 380px) {
+    .contact_section_form .price_range_group .btn {
+        font-size: 10px;
+        padding: 8px 5px;
     }
 }

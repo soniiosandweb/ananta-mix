@@ -6,9 +6,7 @@
 /* .PhoneInputCountry {
     display: none !important;
 } */
-.side-popup-form form.enquire-form .form-section #enquiry-form {
-    justify-content: flex-start;
-}
+
 
 input.align-middle.size-4 {
     scale: 1.5;
@@ -54,29 +52,22 @@ span.thanku-txt {
     font-size: 15px;
     font-weight: 500;
     font-family: var(--font-medium);
-    padding: 10px 20px !important;
+    padding: 10px 15px !important;
     height: auto;
     border: 1px solid #A3A1A1 !important;
     border-radius: 8px;
     background-color: var(--color-transparent) !important;
     color: var(--color-black);
-    background-image: none !important;
-    box-shadow: unset !important;
     width: 100%;
 }
 .enquire-form input::placeholder {
     color: #686868;
 }
-.enquire-form input.invalid,
-.enquire-form .PhoneInput.phone-input-error {
-    background-image: none !important;
-    border-color: var(--color-red) !important;
-}
 .enquire-form .PhoneInput {
     border: 1px solid #A3A1A1 !important;
     border-radius: 8px;
     background-color: var(--color-transparent) !important;
-    padding: 10px 30px !important;
+    padding: 10px 15px !important;
 }
 .enquire-form .PhoneInput input {
     border: none !important;
@@ -95,7 +86,6 @@ span.thanku-txt {
     margin-top: 5px;
     border: 1px solid var(--color-white) !important;
 }
-
 .enquire-form .submit_btn {
     background-color: var(--color-old-brown) !important;
     color: var(--color-white);
@@ -106,22 +96,15 @@ span.thanku-txt {
     font-weight: 500;
     font-family: var(--font-medium);
     border: 1px solid var(--color-old-brown) !important;
-    margin-top: 1rem;
 }
 .enquire-form .submit_btn:hover {
     background-color: var(--color-white) !important;
     color: var(--color-old-brown) !important;
 }
 .enquire-form .error {
-    color: var(--color-red) !important;
-    font-size: 12px;
-}
-.enquire-form .form_error {
-    color: var(--color-red) !important;
-    font-size: 14px;
+    color: #ff3838 !important;
     font-weight: 600;
     font-family: var(--font-semibold);
-    margin-bottom: 10px;
 }
 .enquire-form .form-row {
     padding: 5px 0 !important;
@@ -137,18 +120,6 @@ span.thanku-txt {
 .enquire-form .form-row-flex .form-row {
     width: 100%;
 }
-.enquire-form .checkbox_div .form-check {
-    display: flex;
-    align-items: start;
-    gap: 10px;
-    padding: 0;
-}
-.enquire-form .checkbox_div .form-check input {
-    width: 18px;
-    height: 18px;
-    padding: 0 !important;
-    margin: 0;
-}
 .custom-checkbox input {
   display: none;
 }
@@ -157,11 +128,12 @@ span.thanku-txt {
     font-weight: 600;
     font-family: var(--font-semibold);
     color: var(--color-old-brown);
-    margin: 8px 0 5px;
+    margin-bottom: 5px;
 }
 .price_range_group {
-    flex-wrap: wrap;
+    flex-wrap: unset;
     gap: 10px;
+    width: 100%;
 }
 .price_range_group .btn {
     font-size: 14px;
@@ -172,9 +144,8 @@ span.thanku-txt {
     background-color: var(--color-transparent);
     border: 0.5px solid #A3A1A1 !important;
     border-radius: 4px !important;
-    width: auto;
+    width: 100%;
     flex: unset;
-    min-width: 124px;
     padding: 10px;
 }
 .price_range_group .btn-check:checked+.btn,
@@ -182,8 +153,6 @@ span.thanku-txt {
 .price_range_group .btn:hover {
     background-color: var(--color-old-brown);
     color: var(--color-white);
-    font-family: var(--font-semibold);
-    font-weight: 600;
 }
 .custom-checkbox .checkmark {
   width: 18px;
@@ -219,6 +188,13 @@ span.thanku-txt {
 .custom-checkbox input:checked + .checkmark::after {
   display: block;
   border-color: var(--color-black);
+}
+.we_get_row {
+    border-top: 1px solid var(--color-old-brown);
+    margin-top: 5px;
+}
+.we_get_row .form_label {
+    margin-top: 10px;
 }
 .we_get_div_grid {
     display: grid;
@@ -272,10 +248,18 @@ span.thanku-txt {
     }
     .price_range_group .btn {
         min-width: auto;
-        font-size: 11px;
-        padding: 5px 8px;
+        font-size: 10px;
+        padding: 8px;
     }
     .enquire-form .form_label {
         font-size: 18px;
+    }
+    .MuiDialog-root.form_popup .MuiDialog-container .MuiPaper-root {
+        margin: 15px;
+    }
+}
+@media (max-width: 350px) {
+    .price_range_group .btn {
+        padding: 5px;
     }
 }

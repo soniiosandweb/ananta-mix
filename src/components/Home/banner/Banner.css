@@ -100,7 +100,7 @@
     line-height: 25px;
     font-weight: 600;
     font-family: var(--font-semibold);
-    background-color: #FF000057;
+    background-color: var(--color-red);
     border-radius: 8px;
     width: fit-content;
     padding: 8px 15px;
