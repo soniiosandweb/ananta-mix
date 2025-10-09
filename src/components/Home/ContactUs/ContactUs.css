@@ -45,7 +45,7 @@
 }
 .contact_section_form {
     background-color: #E3E3E3;
-    border: 0.5px solid var(--color-gray);
+    border: 0.5px solid #555050;
     border-radius: 8px;
     padding: 2rem 3rem;
 }
@@ -54,7 +54,7 @@
     font-weight: 600;
     font-family: var(--font-semibold);
     margin-bottom: 15px;
-    color: var(--color-black);
+    color: var(--color-old-brown);
 }
 .contact_section_form input {
     font-size: 18px;
@@ -109,15 +109,17 @@
     color: var(--color-old-brown) !important;
 }
 .contact_section_form .enquire-form .form_label {
-    color: var(--color-black);
-    font-size: 25px;
-    font-weight: 500;
-    font-family: var(--font-medium);
+    color: var(--color-old-brown);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-semibold);
     margin-top: 1rem;
 }
 .contact_section_form .price_range_group .btn {
-    border-color: var(--color-black) !important;
-    color: var(--color-black);
+    border-color: #686868 !important;
+    color: #686868;
+    padding: 12px;
+    font-size: 16px;
 }
 .contact_section_form .price_range_group .btn-check:checked+.btn,
 .contact_section_form .price_range_group .btn:active,
@@ -127,11 +129,11 @@
     border-color: var(--color-old-brown) !important;
 }
 .contact_section_form .custom-checkbox .checkmark {
-    border-color: var(--color-black);
+    border-color: #421F12;
 }
 .contact_section_form .custom-checkbox input:checked + .checkmark {
     background: var(--color-transparent);
-    border-color: var(--color-black);
+    border-color: #421F12;
 }
 @media (max-width: 1199px) {
     .contact_us_section .contact_us_flex {
@@ -183,11 +185,15 @@
     }
     .contact_section_form input,
     .contact_section_form .PhoneInput {
-        font-size: 16px;
+        font-size: 15px;
         padding: 10px 20px !important;
     }
     .contact_section_form .submit_btn {
         padding: 14px 20px !important;
+    }
+    .contact_section_form .price_range_group .btn {
+        font-size: 14px;
+        padding: 8px 10px;
     }
 }
 @media (max-width: 480px) {

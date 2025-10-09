@@ -202,7 +202,7 @@
         font-size: 11px;
     }
     .main_header .navbar-toggler {
-        padding-right: 5px;
+        padding-right: 2px;
     }
 }
 /* Fixed Buttons */
@@ -312,8 +312,8 @@
     position: fixed;
     height: fit-content;
     right: 30px;
-    transform: translateY(-40%);
-    top: 46%;
+    transform: translateY(-50%);
+    top: 50%;
     z-index: 100;
     max-width: 573px;
     background: #fff;
@@ -324,7 +324,7 @@
     border: 1px solid #644630 !important;
     border-radius: 8px;
     color: var(--color-black);
-    max-height: 743px;
+    max-height: 710px;
     overflow-y: auto;
 }
 
@@ -474,7 +474,7 @@
 .price_list_form_col .enquire-form input,
 .price_list_form_col .enquire-form .PhoneInput {
     font-size: 16px;
-    padding: 8px 20px !important;
+    padding: 9px 20px !important;
 }
 .price_list_form_col .enquire-form .PhoneInput input {
     border: none !important;
@@ -491,9 +491,6 @@
 .price_list_form_col .enquire-form .form-row {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-}
-.price_list_form_col .text-green-700 {
-    color: var(--color-white);
 }
 .price_list_form_col .price_range_group .btn {
     min-width: 170px;
@@ -619,9 +616,17 @@
     }
     .price_list_form_col .enquire-form .form_label {
         font-size: 13px;
+        margin-top: 0;
+    }
+    .price_list_form_col .enquire-form .error {
+        font-size: 11px;
     }
     .side-popup-form {
         padding: 15px;
+    }
+    .price_list_form_col .enquire-form .form-row-flex {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 @media (max-width: 480px) {
@@ -654,7 +659,8 @@
     .price_list_subtext {
         font-size: 12px;
     }
-    .side-popup-form form.enquire-form .form-section #enquiry-form {
+    .side-popup-form form.enquire-form .form-section #enquiry-form,
+    .price_list_form_col .enquire-form .form-row-flex {
         gap: 6px !important;
     }
     .price_list_heading_block .form_logo {
@@ -662,6 +668,13 @@
     }
     .price_list_form_col .we_get_div_grid .we_get_div_item .we_get_text {
         font-size: 9px;
+    }
+    .price_list_form_col .price_range_group .btn {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+    .price_list_form_col .we_get_div_grid {
+        margin-top: 0;
     }
 }
 
