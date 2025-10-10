@@ -178,6 +178,15 @@
     .main_header .navbar {
         padding: 7.5px 0px;
     }
+    .main_header .navbar-brand .logo_header {
+        height: 30px;
+    }
+    .header_right .header_call {
+        gap: 5px;
+    }
+    .main_header .navbar-toggler {
+        padding-right: 3px;
+    }
 }
 @media (max-width: 400px) {
     .main_header .navbar-brand .logo_header {
@@ -191,16 +200,16 @@
         gap: 2px;
     }
     .header_right .header_call img {
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
     }
     .main_header .navbar-toggler .menu_icon {
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
     }
     .main_header .header_right .header_request_btn, 
     .header_rera_number {
-        font-size: 11px;
+        font-size: 10px;
     }
     .main_header .navbar-toggler {
         padding-right: 2px;
@@ -426,13 +435,15 @@ form.enquire-form .form-section #enquiry-form {
     position: absolute;
     right: 20px;
     top: 15px;
-    font-size: 22px;
+    font-size: 1.5vw;
+    z-index: 1;
 }
+/*
 .price_list_heading_block .form_logo {
     width: 104px;
 }
-.price_list_heading {
-    font-size: 1.5vw;
+ .price_list_heading {
+    font-size: 25px;
     font-weight: 600;
     font-family: var(--font-semibold);
     color: var(--color-old-brown);
@@ -686,7 +697,7 @@ form.enquire-form .form-section #enquiry-form {
         font-size: 10px;
         padding: 5px;
     }
-}
+} */
 /* Header fixed btns */
 .fixed_btns_header {
     right: 5%;
@@ -727,7 +738,7 @@ form.enquire-form .form-section #enquiry-form {
 }
 
 /* popup */
-/* .price_list_popup_dialog.MuiDialog-root {
+.price_list_popup_dialog.MuiDialog-root {
     left: auto;
     width: max-content;
 }
@@ -741,10 +752,21 @@ form.enquire-form .form-section #enquiry-form {
 }
 .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
     max-width: 35vw;
-    margin: 72px 30px 30px;
+    margin: 92px 30px 30px;
+    max-height: calc(100% - 100px);
+    padding: 1.5vw;
+}
+.price_list_heading_block .form_logo {
+    width: 5vw;
+}
+.price_list_heading {
+    font-size: 1.4vw;
+    font-weight: 600;
+    font-family: var(--font-semibold);
+    color: var(--color-old-brown);
 }
 .price_list_subtext {
-    font-size: 0.8vw;
+    font-size: 0.7vw;
     margin-bottom: 1vw;
 }
 .price_list_popup_dialog h5 {
@@ -755,28 +777,252 @@ form.enquire-form .form-section #enquiry-form {
     gap: 10px;
     flex-direction: row;
 }
-.price_list_popup_dialog .enquire-form input {
+.price_list_popup_dialog .enquire-form input,
+.price_list_popup_dialog .enquire-form .PhoneInput {
     font-size: 0.9vw;
+    padding: 0.6vw 1vw !important;
 }
 .price_list_popup_dialog .enquire-form .form-section #enquiry-form {
     gap: 0 !important;
 }
 .price_list_popup_dialog .enquire-form .form_label {
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 .price_list_popup_dialog .price_range_group .btn {
     font-size: 0.8vw;
-    min-width: max-content;
+    min-width: auto;
+    padding: 0.55vw;
 }
 .price_list_popup_dialog .enquire-form .submit_btn {
-    padding: 10px 20px !important
+    padding: 0.6vw 1vw !important;
+    margin-top: 1rem;
 }
-.price_list_popup_dialog .enquire-form .checkbox_div {
-    font-size: 0.8vw;
+.price_list_popup_dialog .enquire-form .checkbox_div,
+.price_list_popup_dialog .enquire-form .error {
+    font-size: 0.7vw;
 }
 .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
-    font-size: 0.6vw;
+    font-size: 0.55vw;
 }
 .enquire-form .form-row.we_get_row {
     margin-top: 1rem !important;
-} */
+}
+@media (min-width: 1600px) {
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 30vw;
+    }
+}
+@media (max-width: 1399px) {
+    .price_list_heading {
+        font-size: 1.4vw;
+    }
+    .price_list_subtext {
+        font-size: 0.75vw;
+    }
+    .price_list_popup_dialog .enquire-form input,
+    .price_list_popup_dialog .enquire-form .PhoneInput,
+    .price_list_popup_dialog .enquire-form .submit_btn {
+        font-size: 0.9vw;
+        padding: 0.6vw 1.4vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .form_label {
+        font-size: 1.1vw;
+    }
+    .price_list_popup_dialog .price_range_group .btn {
+        font-size: 0.8vw;
+        padding: 0.5vw 0.8vw;
+    }
+    .price_list_popup_dialog .enquire-form .checkbox_div,
+    .price_list_popup_dialog .enquire-form .error {
+        font-size: 0.75vw;
+    }
+    .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 0.65vw;
+    }
+    .price_list_heading_block svg {
+        font-size: 1.75vw;
+    }
+}
+@media (max-width: 1199px) {
+    .price_list_heading_block .form_logo {
+        width: 90px;
+    }
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 38vw;
+    }
+    .price_list_heading {
+        font-size: 1.7vw;
+    }
+    .price_list_subtext {
+        font-size: 0.9vw;
+    }
+    .price_list_popup_dialog .enquire-form input,
+    .price_list_popup_dialog .enquire-form .PhoneInput {
+        font-size: 1.1vw;
+        padding: 0.6vw 1.4vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .form_label {
+        font-size: 1.4vw;
+    }
+    .price_list_popup_dialog .price_range_group .btn {
+        font-size: 1vw;
+        padding: 0.5vw 0.8vw;
+    }
+    .price_list_popup_dialog .enquire-form .submit_btn {
+        font-size: 1.1vw;
+        padding: 0.6vw 1.4vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .checkbox_div,
+    .price_list_popup_dialog .enquire-form .error {
+        font-size: 1vw;
+    }
+    .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 0.65vw;
+    }
+    .price_list_heading_block svg {
+        font-size: 1.8vw;
+    }
+}
+@media (max-width: 991px) {
+    .price_list_heading_block .form_logo {
+        width: 95px;
+    }
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 40vw;
+    }
+    .price_list_heading {
+        font-size: 2vw;
+    }
+    .price_list_subtext {
+        font-size: 1.2vw;
+    }
+    .price_list_popup_dialog .enquire-form input,
+    .price_list_popup_dialog .enquire-form .PhoneInput {
+        font-size: 1.2vw;
+        padding: 0.8vw 1.5vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .form_label {
+        font-size: 1.6vw;
+    }
+    .price_list_popup_dialog .price_range_group .btn {
+        font-size: 1.2vw;
+        padding: 0.5vw 0.8vw;
+    }
+    .price_list_popup_dialog .enquire-form .submit_btn {
+        font-size: 1.2vw;
+        padding: 0.8vw 1.5vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .checkbox_div,
+    .price_list_popup_dialog .enquire-form .error {
+        font-size: 1vw;
+    }
+    .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 0.8vw;
+    }
+    .price_list_heading_block svg {
+        font-size: 2vw;
+    }
+}
+@media (max-width: 767px) {
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 50vw;
+        padding: 2vw;
+    }
+    .price_list_popup_dialog .MuiDialog-container {
+        justify-content: center;
+        margin-left: 0;
+        width: 100%;
+    }
+    .price_list_popup_dialog.MuiDialog-root {
+        left: 0;
+        width: 100%;
+    }
+    .price_list_heading {
+        font-size: 2.5vw;
+    }
+    .price_list_subtext {
+        font-size: 1.5vw;
+    }
+    .price_list_popup_dialog .enquire-form input,
+    .price_list_popup_dialog .enquire-form .PhoneInput {
+        font-size: 1.8vw;
+        padding: 1vw 1.5vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .form-section #enquiry-form {
+        gap: 0 !important;
+    }
+    .price_list_popup_dialog .enquire-form .form_label {
+        font-size: 1.8vw;
+    }
+    .price_list_popup_dialog .price_range_group .btn {
+        font-size: 1.6vw;
+        padding: 0.6vw 0.8vw;
+    }
+    .price_list_popup_dialog .enquire-form .submit_btn {
+        font-size: 1.8vw;
+        padding: 1vw 1.5vw !important;
+    }
+    .price_list_popup_dialog .enquire-form .checkbox_div,
+    .price_list_popup_dialog .enquire-form .error {
+        font-size: 1.4vw;
+    }
+    .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 1.2vw;
+    }
+    .price_list_heading_block svg {
+        font-size: 2.5vw;
+    }
+}
+@media (max-width: 600px) {
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 60vw;
+    }
+}
+@media (max-width: 500px) {
+    .price_list_heading_block .form_logo {
+        width: 85px;
+    }
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 80vw;
+    }
+    .price_list_heading {
+        font-size: 3vw;
+    }
+    .price_list_subtext {
+        font-size: 2.5vw;
+    }
+    .price_list_popup_dialog .enquire-form input,
+    .price_list_popup_dialog .enquire-form .PhoneInput {
+        font-size: 2.5vw;
+        padding: 1.2vw 2vw !important;
+        border-radius: 4px;
+    }
+    .price_list_popup_dialog .enquire-form .form_label {
+        font-size: 2.6vw;
+    }
+    .price_list_popup_dialog .price_range_group .btn {
+        font-size: 2.4vw;
+        padding: 0.8vw 0.8vw;
+    }
+    .price_list_popup_dialog .enquire-form .submit_btn {
+        font-size: 2.5vw;
+    }
+    .price_list_popup_dialog .enquire-form .checkbox_div,
+    .price_list_popup_dialog .enquire-form .error {
+        font-size: 2.4vw;
+    }
+    .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
+        font-size: 2vw;
+    }
+    .price_list_heading_block svg {
+        font-size: 3.5vw;
+        right: 15px;
+        top: 15px;
+    }
+}
+@media (max-width: 380px) {
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        max-width: 100vw;
+        padding: 3vw;
+    }
+}

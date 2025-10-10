@@ -182,7 +182,7 @@
 }
 @media (max-width: 767px) {
     .banner_slider_item {
-        height: 700px;
+        min-height: 700px;
     }
     .banner_slider_item .banner_sliders_flex {
         flex-direction: column-reverse;

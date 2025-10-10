@@ -72,7 +72,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         const newErrors = {};
 
         // Name required
-        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!formData.name.trim()) newErrors.name = "Please Fill Out this Field";
 
         // Email optional but must be valid if filled
         if (formData.email && !/\S+@\S+\.\S+/.test(formData.email))
@@ -80,7 +80,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
 
         // Mobile number validation using react-phone-number-input helpers
         if (!formData.mobileNumber) {
-            newErrors.mobileNumber = "Mobile number is required";
+            newErrors.mobileNumber = "Please Fill Out this Field";
         } else if (!isPossiblePhoneNumber(formData.mobileNumber)) {
             newErrors.mobileNumber = "Phone number format looks incorrect";
         } else if (!isValidPhoneNumber(formData.mobileNumber)) {
@@ -194,7 +194,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 className={errors.name ? "invalid" : ""}
-                                placeholder='Name'
+                                placeholder='Name*'
                             />
                             {errors.name && <p className="text-red-400 error text-sm">{errors.name}</p>}
                         </div>

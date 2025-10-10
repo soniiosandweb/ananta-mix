@@ -305,7 +305,7 @@ console.log(id,'click')
                 </div>
               </Dialog>
 
-              <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
+              {/* <div className={` side-popup-form ${showsidePopup ? 'block' : 'hidden'} border-3 border-primary-brown `}>
                 <div className="price_list_heading_block">
                   <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
                   <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={newSidePopUpClose} />
@@ -317,10 +317,10 @@ console.log(id,'click')
                     <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
           {/* Price List Popup */}
-          {/* <Dialog
+          <Dialog
                 open={showsidePopup}
                 onClose={newSidePopUpClose}
                 className="price_list_popup_dialog"
@@ -332,7 +332,6 @@ console.log(id,'click')
                       borderRadius: "8px",
                       borderColor:'#fff',
                       backgroundColor: "#fff",
-                      padding: "20px",
                       boxShadow: '0px 0px 4px 0px #644630'
                     },
                   },
@@ -350,7 +349,7 @@ console.log(id,'click')
                     <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
                   </div>
                 </div>
-              </Dialog> */}
+              </Dialog>
 
         </>
     )
