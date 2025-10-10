@@ -44,8 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  padding-right: 0 !important;
-  overflow-y: auto !important;
+  /* padding-right: 0 !important;
+  overflow-y: auto !important; */
 }
 .yarl__no_scroll {
   overflow: hidden !important;

@@ -121,14 +121,13 @@ const Header = () => {
     },[locationValue]);
 
     // Show popup automatic
-    useEffect(() => {
-        setTimeout(() => {
-            setshowsidePopup(true);
-        }, 5000); 
+     useEffect(() => {
+      setTimeout(() => {
+        setshowsidePopup(true);
+        setOpen(false);
+      }, 5000);
 
-    
-        // return () => clearTimeout(timer);
-    }, []);
+    }, [])
 
     const newSidePopUpClose = (e) => {
         e.preventDefault();
@@ -322,7 +321,12 @@ console.log(id,'click')
           {/* Price List Popup */}
           <Dialog
                 open={showsidePopup}
-                onClose={newSidePopUpClose}
+                onClose={(event, reason) => {
+                  // Prevent closing when clicking outside or pressing Esc
+                  if (reason !== "backdropClick" && reason !== "escapeKeyDown") {
+                    newSidePopUpClose();
+                  }
+                }}
                 className="price_list_popup_dialog"
                 aria-hidden="false"
                 sx={{

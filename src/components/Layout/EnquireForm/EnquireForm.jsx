@@ -14,27 +14,27 @@ import operator from "../../../assests/images/operator.png";
 const weGetOptions = [
     {
         icon: telephone,
-        text: "Quick Call Back by Our Expert Consultant",
+        text: "Quick Call Back",
     },
     {
         icon: carIcon,
         text: "Free Site Visit with Pickup & Drop",
     },
     {
-        icon: appIcon,
-        text: "Brochure, Floor Plans & Pricing on WhatsApp",
-    },
-    {
         icon: rupee,
-        text: "Best Price Guarantee – Direct from Developer",
+        text: "Best Price Guarantee",
     },
     {
         icon: business,
-        text: "Dedicated Luxury Property Advisor",
+        text: "Dedicated Property Advisor",
     },
     {
         icon: operator,
-        text: "Assistance with Home Loans & Legal Formalities",
+        text: "Assistance with Home Loan & Legal Aid",
+    },
+    {
+        icon: appIcon,
+        text: "Project Brochure & Floor Plans on WhatsApp",
     }
 ]
 
@@ -125,7 +125,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                     setFormSuccess(
                         <>
                             <span className='thanku-txt'>THANK YOU </span>
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col success_msg'>
                                 <span> For Trusting Us with Your Home Search!!</span> 
                                 <span>We’ll Reach Out Soon With All the Details.</span> 
                             </div>
@@ -172,19 +172,22 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
     }
 
     return (
-        <form className="enquire-form" id='enquiry-form' onSubmit={handleSubmit}>
+        <form className="enquire-form" onSubmit={handleSubmit}>
              <div className={`form-section text-left ${formSuccess ? 'form-success' : ''}`}>
                 {formError && (
                     <p className="form_error text-center">{formError}</p>
                 )}
 
-                {formSuccess && (
+                
+                {formVisible && (<div className='gap-2' id='enquiry-form'>
+
+                    {formSuccess && (
                     <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
                         {/* <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div> */}
                         <span className='flex flex-col gap-2 flex flex-col success-text'>{formSuccess}</span>
                     </p>
                 )}
-                {formVisible && (<div className='gap-2' id='enquiry-form'>
+
                     <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
                     <div className='form-row-flex'>
                         <div className="py-2 form-row">
@@ -270,7 +273,10 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                       
                     </div>
 
-                    {formId && formId === "price" &&
+                </div>
+                
+                )}
+                {formId && formId === "price" &&
                         <div className="py-2 form-row we_get_row">
                             <p className='form_label'>What You Get</p>
                             <div className='we_get_div_grid'>
@@ -283,8 +289,6 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                             </div>
                         </div>
                     }
-                </div>
-                )}
             </div>
         </form>
     )
