@@ -174,12 +174,14 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
     return (
         <form className="enquire-form" onSubmit={handleSubmit}>
              <div className={`form-section text-left ${formSuccess ? 'form-success' : ''}`}>
-                {formError && (
-                    <p className="form_error text-center">{formError}</p>
-                )}
+                
 
                 
                 {formVisible && (<div className='gap-2' id='enquiry-form'>
+
+                    {formError && (
+                    <p className="form_error text-center">{formError}</p>
+                )}
 
                     {formSuccess && (
                     <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
