@@ -715,7 +715,7 @@ form.enquire-form .form-section #enquiry-form {
 } */
 /* Header fixed btns */
 .fixed_btns_header {
-    right: 5%;
+    right: 67px;
     left: auto;
     position: fixed;
     bottom: 5%;
@@ -727,6 +727,11 @@ form.enquire-form .form-section #enquiry-form {
     height: 50px;
     object-fit: contain;
     cursor: pointer;
+}
+@media (max-width: 1320px) {
+    .fixed_btns_header {
+        right: 30px;
+    }
 }
 @media (max-width: 991px) {
     .fixed_btns_header .header_btns_float {
@@ -753,6 +758,9 @@ form.enquire-form .form-section #enquiry-form {
 }
 
 /* popup */
+.MuiBackdrop-root.MuiModal-backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+}
 .success-wrapper .success_msg {
     color: var(--color-gray);
         margin-bottom: 1rem;
@@ -762,6 +770,7 @@ form.enquire-form .form-section #enquiry-form {
 }
 .price_list_popup_dialog .MuiDialog-container {
     width: 100%;
+    justify-content: end;
 }
 .form_popup .MuiDialog-container .MuiPaper-root {
     margin: 92px 30px 30px;
@@ -769,7 +778,7 @@ form.enquire-form .form-section #enquiry-form {
 }
 .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
     max-width: 42vw;
-    margin: 92px 30px 30px;
+    margin: 92px 67px 30px 30px;
     max-height: calc(100% - 100px);
     padding: 1.5vw;
 }
@@ -840,7 +849,7 @@ form.enquire-form .form-section #enquiry-form {
 .we_get_div_grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    gap: 1.5rem;
     margin-top: 10px;
     align-items: start;
 }
@@ -899,6 +908,11 @@ form.enquire-form .form-section #enquiry-form {
         font-size: 1.75vw;
     }
 }
+@media (max-width: 1320px) {
+    .price_list_popup_dialog .MuiDialog-container .MuiPaper-root {
+        margin: 92px 30px 30px 30px;
+    }
+}
 @media (max-width: 1199px) {
     .price_list_heading_block .form_logo {
         width: 100px;
@@ -931,6 +945,9 @@ form.enquire-form .form-section #enquiry-form {
     .price_list_popup_dialog .enquire-form .checkbox_div,
     .price_list_popup_dialog .enquire-form .error {
         font-size: 0.8vw;
+    }
+    .we_get_div_grid {
+        gap: 1rem;
     }
     .price_list_popup_dialog .we_get_div_grid .we_get_div_item .we_get_text {
         font-size: 0.7vw;
@@ -988,6 +1005,7 @@ form.enquire-form .form-section #enquiry-form {
         left: 0;
         width: 100%;
     }
+    
 }
 
 @media (max-width: 516px) {

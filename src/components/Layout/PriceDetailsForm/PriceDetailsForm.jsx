@@ -41,7 +41,7 @@ const PriceDetailsForm = () => {
                 <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
                 <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
                 <div className="price_list_form_col">
-                    <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Check Latest Pricing" />
+                    <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Download Price List" />
                 </div>
             </div>
         </Dialog>
