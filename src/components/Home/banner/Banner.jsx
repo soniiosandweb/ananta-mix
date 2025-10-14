@@ -10,9 +10,12 @@ import banner4 from "../../../assests/images/banner/banner4.png";
 import bannerSmall4 from "../../../assests/images/banner/banner4-small.jpg";
 import banner5 from "../../../assests/images/banner/banner5.png";
 import bannerSmall5 from "../../../assests/images/banner/banner5-small.jpg";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import homeIcon from "../../../assests/images/home.png";
 import { useState } from "react";
+import EnquireForm from "../../Layout/EnquireForm/EnquireForm";
+import { useFormContext } from "../../Layout/FormContext";
+import whatsappIcon from "../../../assests/images/whatsapp.png";
 
 const slides = [
     {
@@ -71,10 +74,12 @@ const listsItem = [
 
 const Banner = () => {
 
+    const { openPriceForm } = useFormContext();
+
     const [activeSlide, setActiveSlide] = useState(0);
 
     const settings = {
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         dots: false,
         infinite: true,
@@ -91,41 +96,57 @@ const Banner = () => {
         <div className="banner_slider_section">
             <Slider {...settings}>
                 {slides.map((item,i) => (
-                    <div className="banner_slider_item padding-top padding-bottom" key={i}>
+                    <div className="banner_slider_item" key={i}>
                         <img src={item.image} alt={item.imageAlt} className="banner_bg_image" />
-                        <Container fluid>
-                            <Row>
-                                <Col>
-                                    <div className="banner_sliders_flex">
-                                        <div className="banner_slider_text_block">
-                                            <div className="booking_text_banner">Booking Open</div>
-                                            <div className="banner_slider_text_bg">
-                                                {activeSlide === i ? 
-                                                    <h1 className="banner_slider_heading">{item.title}</h1>
-                                                :
-                                                    <h2 className="banner_slider_heading">{item.title}</h2>
-                                                }
-                                                
-                                                <h2 className="banner_slider_subtext">{item.text}</h2>
-                                                <p className="banner_slider_red_text">{item.subtext}</p>
-                                                <div className="banner_slider_icons_lists">
-                                                    {listsItem.map((list,index) => (
-                                                        <div className="banner_slider_lists_item" key={index}>
-                                                            <img src={homeIcon} alt="Home" className="home_icon" />
-                                                            <p className="banner_slider_lists_text">{list}</p>
-                                                        </div>
-                                                    ))}
+                        <div className="banner_context_form_flex">
+                            <Container fluid>
+                                <Row>
+                                    <Col>
+                                        <div className="banner_sliders_flex">
+                                            <div className="banner_slider_text_block">
+                                                <div className="booking_text_banner">Booking Open</div>
+                                                <div className="banner_slider_text_bg">
+                                                    {activeSlide === i ? 
+                                                        <h1 className="banner_slider_heading">{item.title}</h1>
+                                                    :
+                                                        <h2 className="banner_slider_heading">{item.title}</h2>
+                                                    }
+                                                    
+                                                    <h2 className="banner_slider_subtext">{item.text}</h2>
+                                                    <p className="banner_slider_red_text">{item.subtext}</p>
+                                                    <div className="banner_slider_icons_lists">
+                                                        {listsItem.map((list,index) => (
+                                                            <div className="banner_slider_lists_item" key={index}>
+                                                                <img src={homeIcon} alt="Home" className="home_icon" />
+                                                                <p className="banner_slider_lists_text">{list}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             </div>
+                                            {/* <div className="banner_small_image">
+                                                <img src={item.smallImg} alt={item.smallAlt} className="banner_small_img" />
+                                            </div> */}
+                                            
                                         </div>
-                                        {/* <div className="banner_small_image">
-                                            <img src={item.smallImg} alt={item.smallAlt} className="banner_small_img" />
-                                        </div> */}
-                                        
+                                    </Col>
+                                </Row>
+                                <div className="banner_text_gradient"></div>
+                            </Container>
+
+                            <div className="right_fixed_sidebar">
+                                <Button className="right_fixed_schedule" onClick={openPriceForm}>Schedule a Free Site Visit</Button>
+                                <div className="bottom_fixed_sidebar">
+                                    <EnquireForm formId={"fixed"} title="Ultra-Luxurious 3, 3+1, and 4+1 BHK Flats & Penthouses/Duplexes | Starting at ₹1.5 Cr*" button="Enquire Now" />
+                                    <div className="whatsapp_link_sidebar">
+                                        <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
+                                            <img src={whatsappIcon} alt="Whatsapp" className="header_btns_float whatsapp" />
+                                        </a>
                                     </div>
-                                </Col>
-                            </Row>
-                        </Container>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 ))}
             </Slider>
