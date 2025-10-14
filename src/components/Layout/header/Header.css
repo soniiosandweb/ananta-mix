@@ -44,7 +44,7 @@
     margin-left: auto;
     color: var(--color-old-brown);
     text-decoration: unset;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Poppins";
     font-weight: 900;
     display: flex;
@@ -124,6 +124,9 @@
         font-size: 17px;
         padding: 14px 10px;
     }
+    .header_right .header_call {
+        font-size: 18px;
+    }
 }
 @media (max-width: 1320px) {
     .main_header .navbar {
@@ -139,7 +142,7 @@
         font-size: 12px;
     }
     .header_right .header_call {
-        font-size: 13px;
+        font-size: 14px;
         gap: 5px;
     }
     .header_right .header_call img {
@@ -147,8 +150,8 @@
         height: 20px;
     }
     .header_offcanvas .navbar-nav .nav-link {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 13px;
+        padding: 8px 5px;
     }
     .main_header .header_right .header_right_top {
         gap: 8px;
@@ -175,6 +178,7 @@
     }
     .header_right .header_call {
         gap: 8px;
+        font-size: 15px;
     }
 }
 @media (max-width: 575px) {
@@ -182,10 +186,15 @@
         padding: 7.5px 0px;
     }
     .main_header .navbar-brand .logo_header {
-        height: 30px;
+        height: 28px;
     }
     .header_right .header_call {
-        gap: 5px;
+        gap: 3px;
+        font-size: 13px;
+    }
+    .header_right .header_call img {
+        width: 15px;
+        height: 15px;
     }
     .main_header .navbar-toggler {
         padding-right: 3px;
@@ -199,7 +208,7 @@
         padding: 4px 5px;
     }
     .header_right .header_call {
-        font-size: 11px;
+        font-size: 12px;
         gap: 2px;
     }
     .header_right .header_call img {
@@ -219,6 +228,9 @@
     }
     .main_header .header_right .header_right_top {
         gap: 4px;
+    }
+    .main_header .container-fluid {
+        padding: 0 8px;
     }
 }
 /* Fixed Buttons */

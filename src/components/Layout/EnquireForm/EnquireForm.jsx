@@ -127,7 +127,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                             <span className='thanku-txt'>THANK YOU </span>
                             <div className='flex flex-col success_msg'>
                                 <span> For Trusting Us with Your Home Search!!</span> 
-                                <span>We’ll Reach Out Soon With All the Details.</span> 
+                                <span>We'll Reach Out Soon With All the Details.</span> 
                             </div>
                         </>
                     );
@@ -175,20 +175,18 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         <form className="enquire-form" onSubmit={handleSubmit}>
              <div className={`form-section text-left ${formSuccess ? 'form-success' : ''}`}>
                 
-
-                
                 {formVisible && (<div className='gap-2' id='enquiry-form'>
 
                     {formError && (
-                    <p className="form_error text-center">{formError}</p>
-                )}
+                        <p className="form_error text-center">{formError}</p>
+                    )}
 
                     {formSuccess && (
-                    <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
-                        {/* <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div> */}
-                        <span className='flex flex-col gap-2 flex flex-col success-text'>{formSuccess}</span>
-                    </p>
-                )}
+                        <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
+                            {/* <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div> */}
+                            <span className='flex flex-col gap-2 flex flex-col success-text'>{formSuccess}</span>
+                        </p>
+                    )}
 
                     <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
                     <div className='form-row-flex'>
