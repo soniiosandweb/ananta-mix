@@ -15,7 +15,41 @@ import homeIcon from "../../../assests/images/home.png";
 import { useState } from "react";
 import EnquireForm from "../../Layout/EnquireForm/EnquireForm";
 import { useFormContext } from "../../Layout/FormContext";
-import whatsappIcon from "../../../assests/images/whatsapp.png";
+import logo from "../../../assests/images/logo.png";
+
+import telephone from "../../../assests/images/telephone.png";
+import appIcon from "../../../assests/images/app-icon.png";
+import rupee from "../../../assests/images/rupee.png";
+import business from "../../../assests/images/businessman.png";
+import operator from "../../../assests/images/operator.png";
+import carIcon from "../../../assests/images/car-icon.png";
+
+const weGetOptions = [
+    {
+        icon: telephone,
+        text: "Quick Call Back by Our Expert Consultant",
+    },
+    {
+        icon: carIcon,
+        text: "Free Site Visit with Pickup & Drop Service",
+    },
+    {
+        icon: appIcon,
+        text: "Brochure, Floor Plans & Pricing on WhatsApp",
+    },
+    {
+        icon: rupee,
+        text: "Best Price Guarantee – Direct from Developer",
+    },
+    {
+        icon: business,
+        text: "Dedicated Luxury Property Advisor",
+    },
+    {
+        icon: operator,
+        text: "Assistance with Home Loans & Legal Formalities",
+    }
+]
 
 const slides = [
     {
@@ -79,7 +113,7 @@ const Banner = () => {
     const [activeSlide, setActiveSlide] = useState(0);
 
     const settings = {
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
         dots: false,
         infinite: true,
@@ -122,6 +156,7 @@ const Banner = () => {
                                                             </div>
                                                         ))}
                                                     </div>
+                                                    <Button className="right_fixed_schedule" onClick={() => openPriceForm("Schedule Your Free Site Visit with Pickup & Drop Service", "Experience Ananta Aspire firsthand. Share your details to book a personalized tour.", "Schedule  Visit", "schedule")}>Schedule a Free Site Visit</Button>
                                                 </div>
                                             </div>
                                             {/* <div className="banner_small_image">
@@ -134,22 +169,33 @@ const Banner = () => {
                                 <div className="banner_text_gradient"></div>
                             </Container>
 
-                            <div className="right_fixed_sidebar">
-                                <Button className="right_fixed_schedule" onClick={openPriceForm}>Schedule a Free Site Visit</Button>
-                                <div className="bottom_fixed_sidebar">
-                                    <EnquireForm formId={"fixed"} title="Ultra-Luxurious 3, 3+1, and 4+1 BHK Flats & Penthouses/Duplexes | Starting at ₹1.5 Cr*" button="Enquire Now" />
-                                    <div className="whatsapp_link_sidebar">
-                                        <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
-                                            <img src={whatsappIcon} alt="Whatsapp" className="header_btns_float whatsapp" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         
                     </div>
                 ))}
             </Slider>
+            <div className="right_fixed_sidebar">
+                <div className="bottom_fixed_sidebar">
+                    <div className="price_list_heading_block">
+                        <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
+                    </div>
+                    <p className="price_list_heading">Ananta Aspire Exclusive  Price List!</p>
+                    <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
+                    <EnquireForm formId={"sideFixed"} title="Ultra-Luxurious 3, 3+1, and 4+1 BHK Flats & Penthouses/Duplexes | Starting at ₹ 1.5 Cr*" button="Download Price List" />
+                    <div className="py-2 form-row we_get_row">
+                        <p className='form_label'>What You Get</p>
+                        <div className='we_get_div_grid'>
+                            {weGetOptions.map((item,i) => (
+                                <div className='we_get_div_item' key={i}>
+                                    <img src={item.icon} alt={item.text} className='we_get_icon' />
+                                    <p className='we_get_text'>{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

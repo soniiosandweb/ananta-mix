@@ -29,7 +29,10 @@ input.align-middle.size-4 {
 }
 
 span.thanku-txt {
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 600;
+    font-family: var(--font-semibold);
 }
 .css-19eiqil-MuiModal-root-MuiDialog-root .MuiDialog-container .MuiPaper-root {
     margin: 15px;
@@ -63,6 +66,11 @@ span.thanku-txt {
 .enquire-form input::placeholder {
     color: #686868;
 }
+.enquire-form input.invalid,
+.enquire-form .PhoneInput.phone-input-error,
+.custom-checkbox .checkmark.checkbox-error {
+    border-color: var(--color-red) !important;
+}
 .enquire-form .PhoneInput {
     border: 1px solid #A3A1A1 !important;
     border-radius: 8px;
@@ -76,7 +84,7 @@ span.thanku-txt {
     background-color: var(--color-transparent) !important;
 }
 .enquire-form .checkbox_div {
-    margin-top: 0.5rem !important;
+    margin-top: 1rem !important;
     font-size: 12px;
     color: #484747;
     align-items: start;
@@ -113,9 +121,14 @@ span.thanku-txt {
     color: #ff3838 !important;
     font-weight: 600;
     font-family: var(--font-semibold);
+    font-size: 10px;
+    visibility: hidden;
+}
+.enquire-form .error.visible {
+    visibility: visible;
 }
 .enquire-form .form-row {
-    padding: 5px 0 !important;
+    padding: 0 !important;
 }
 .popup-form svg {
     color: var(--color-old-brown);
@@ -196,6 +209,12 @@ span.thanku-txt {
 .custom-checkbox input:checked + .checkmark::after {
   display: block;
   border-color: var(--color-black);
+}
+@media (max-width: 1399px) {
+    .custom-checkbox .checkmark {
+        width: 14px;
+        height: 14px;
+    }
 }
 @media (max-width: 767px) {
     .enquire-form h5 {

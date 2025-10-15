@@ -69,7 +69,7 @@ const Footer = () => {
                                 <NavLink to="/" className="block w-auto sm:w-max" reloadDocument={true}>
                                     <LazyLoadImage
                                         src={logo}
-                                        alt="Vamana Arvindam"
+                                        alt="Ananta Aspire"
                                         className='header-logo w-40 footer_logo'
                                     />
                                 </NavLink>

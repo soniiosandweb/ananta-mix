@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import phoneIcon from "../../../assests/images/phone.png";
 import menuIcon from "../../../assests/images/menus.png";
 import { Container, Navbar, Nav, Offcanvas, Button } from "react-bootstrap";
-// import whatsappIcon from "../../../assests/images/whatsapp.png";
+import whatsappIcon from "../../../assests/images/whatsapp.png";
 import { useFormContext } from "../FormContext";
 import PriceDetailsForm from "../PriceDetailsForm/PriceDetailsForm";
 import RequestDetailsForm from "../RequestDetailsForm/RequestDetailsForm";
@@ -81,12 +81,12 @@ const Header = () => {
 
   const { openPriceForm } = useFormContext();
 
-  useEffect(() => {
-    setTimeout(() => {
-      openPriceForm();
-    }, 5000);
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     openPriceForm();
+  //   }, 5000);
+  //   // eslint-disable-next-line
+  // }, []);
 
   useEffect(() => {
     const listenScrollEvent = () => {
@@ -207,7 +207,7 @@ const Header = () => {
                   <img src={phoneIcon} alt="Phone" className="phone_icon" />
                   +91 8609000900
                 </Link>
-                <Button className="header_request_btn" onClick={openPriceForm}>Request Details</Button>
+                <Button className="header_request_btn" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")}>Request Details</Button>
               </div>
               <p className="header_rera_number">PBRERA-SAS79-PR0777</p>
             </div>
@@ -222,9 +222,9 @@ const Header = () => {
       </div> */}
       <div className="fixed_btns_header z-20">
         {/* <img src={downloadIcon} alt="Download" className="header_btns_float download" onClick={handleOpen} /> */}
-        {/* <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
+        <a href="https://wa.me/+918609000900" rel="noreferrer" target="_blank">
           <img src={whatsappIcon} alt="Whatsapp" className="header_btns_float whatsapp" />
-        </a> */}
+        </a>
       </div>
 
       <PriceDetailsForm />

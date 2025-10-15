@@ -7,7 +7,7 @@ import { useFormContext } from "../FormContext";
 
 const PriceDetailsForm = () => {
 
-    const { isPriceFormOpen, closePriceForm } = useFormContext();
+    const { isPriceFormOpen, closePriceForm, subTitle, formTitle, buttonText, formId } = useFormContext();
 
     return(
         <Dialog
@@ -38,10 +38,10 @@ const PriceDetailsForm = () => {
                 <FontAwesomeIcon icon={faClose} className="text-2xl cursor-pointer" onClick={closePriceForm} />
             </div>
             <div className="price_list_form_flex">
-                <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
-                <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
+                <p className="price_list_heading">{formTitle ? formTitle : "Ananta Aspire Exclusive Price List!"}</p>
+                <p className="price_list_subtext">{subTitle ? subTitle : "Complete Overview of Current Prices for All Units to Guide Your Property Investment"}</p>
                 <div className="price_list_form_col">
-                    <EnquireForm  formId={"price"} title="Ananta Aspire Price List" button="Download Price List" />
+                    <EnquireForm showSide={true} formId={formId ? formId : "request"} title="Ananta Aspire Price List" button={`${buttonText ? buttonText : "Download Price List"}`} />
                 </div>
             </div>
         </Dialog>

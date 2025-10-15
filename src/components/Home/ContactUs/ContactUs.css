@@ -93,6 +93,8 @@
 }
 .contact_section_form .custom-checkbox .checkmark {
     border: 1px solid #421F12;
+    width: 18px;
+    height: 18px;
 }
 .contact_section_form .submit_btn {
     background-color: var(--color-old-brown) !important;

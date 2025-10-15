@@ -38,7 +38,7 @@ const weGetOptions = [
     }
 ]
 
-const EnquireForm = ({ title, setOpen, button, formId }) => {
+const EnquireForm = ({ title, setOpen, button, formId, showSide }) => {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -122,15 +122,54 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                 //handle success
                 if (response.data.status === 0) {
                     setLoading(false);
-                    setFormSuccess(
-                        <>
-                            <span className='thanku-txt'>THANK YOU </span>
-                            <div className='flex flex-col success_msg'>
-                                <span> For Trusting Us with Your Home Search!!</span> 
-                                <span>We'll Reach Out Soon With All the Details.</span> 
-                            </div>
-                        </>
-                    );
+                    if(formId === "request") {
+                        setFormSuccess(
+                            <>
+                                <span className='thanku-txt'>Thank You for Your Interest in Ananta Aspire.</span>
+                                <div className='flex flex-col success_msg'>
+                                    <span>We appreciate your enquiry! Our sales team will connect with you soon to share exclusive details, floor plans, and offers.</span>
+                                </div>
+                            </>
+                        );
+                    } else if(formId === "sideFixed") {
+                        setFormSuccess(
+                            <>
+                                <span className='thanku-txt'>Thank You!</span>
+                                <div className='flex flex-col success_msg'>
+                                    <span>Your request for the Ananta Aspire price list has been received. Our team will share the latest pricing details with you shortly.</span>
+                                </div>
+                            </>
+                        );
+                    } else if(formId === "schedule") {
+                        setFormSuccess(
+                            <>
+                                <span className='thanku-txt'>Thank You!</span>
+                                <div className='flex flex-col success_msg'>
+                                    <span>Your site visit request has been received successfully. Our team will contact you soon to confirm your Ananta Aspire tour.</span>
+                                </div>
+                            </>
+                        );
+                    } else if(formId === "contact") {
+                        setFormSuccess(
+                            <>
+                                <span className='thanku-txt'>Thank You for Connecting with Us!</span>
+                                <div className='flex flex-col success_msg'>
+                                    <span>We appreciate your interest. A dedicated team member will reach out shortly to assist you with Ananta Aspire.</span>
+                                </div>
+                            </>
+                        );
+                    } else {
+                        setFormSuccess(
+                            <>
+                                <span className='thanku-txt'>THANK YOU </span>
+                                <div className='flex flex-col success_msg'>
+                                    <span> For Trusting Us with Your Home Search!!</span> 
+                                    <span>We'll Reach Out Soon With All the Details.</span> 
+                                </div>
+                            </>
+                        );
+                    }
+                    
                     // if( setOpen){
 
                     //     setFormVisible(false);
@@ -170,25 +209,28 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
         setFormData({ name: "", email: "", mobileNumber: "", terms: false });
         setPriceRange('1 Cr to 1.5 Cr');
     }
+    console.log(formId);
 
     return (
         <form className="enquire-form" onSubmit={handleSubmit}>
              <div className={`form-section text-left ${formSuccess ? 'form-success' : ''}`}>
                 
                 {formVisible && (<div className='gap-2' id='enquiry-form'>
+                    
+                    <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
 
                     {formError && (
                         <p className="form_error text-center">{formError}</p>
                     )}
 
                     {formSuccess && (
-                        <p className="success-wrapper text-green-700 py-2 text-[15px] gap-2 text-center flex flex-col items-center justify-center">
+                        <p className="success-wrapper text-green-700 text-[15px] gap-0 flex flex-col items-center justify-center">
                             {/* <div className="text-white bg-primary-brown check"> <FontAwesomeIcon icon={faCheck} /></div> */}
-                            <span className='flex flex-col gap-2 flex flex-col success-text'>{formSuccess}</span>
+                            <span className='flex flex-col w-full gap-0 flex flex-col success-text'>{formSuccess}</span>
                         </p>
                     )}
 
-                    <h5 className="text-2xl font-semibold capitalize mb-2.5">{title}</h5>
+                    
                     <div className='form-row-flex'>
                         <div className="py-2 form-row">
                             <input
@@ -199,7 +241,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                                 className={errors.name ? "invalid" : ""}
                                 placeholder='Name*'
                             />
-                            {errors.name && <p className="text-red-400 error text-sm">{errors.name}</p>}
+                            <p className={`text-red-400 error text-sm ${errors.name && "visible"}`}>{errors.name ? errors.name : "Please Fill Out this Field"}</p>
                         </div>
                         <div className="py-2 form-row">
                             <input
@@ -210,7 +252,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                                 onChange={handleChange}
                                 className={errors.email ? "invalid" : ""}
                             />
-                            {errors.email && <p className="text-red-400 error text-sm">{errors.email}</p>}
+                            <p className={`text-red-400 error text-sm ${errors.email && "visible"}`}>{errors.email ? errors.email : "Please Fill Out this Field"}</p>
                         </div>
                     </div>
                     
@@ -227,9 +269,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                             national="true"
                             international={false}
                         />
-                        {errors.mobileNumber && (
-                            <p className="text-red-400 error text-sm">{errors.mobileNumber}</p>
-                        )}
+                        <p className={`text-red-400 error text-sm ${errors.mobileNumber && "visible"}`}>{errors.mobileNumber ? errors.mobileNumber : "Please Fill Out this Field"}</p>
                     </div>
 
                     <div className="py-2 form-row">
@@ -258,15 +298,13 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                                 onChange={handleChange}
                                 className={errors.terms ? "checkbox-error checkbox" : "checkbox"} 
                             /> 
-                            <span className="checkmark"></span>
+                            <span className={errors.terms ? "checkbox-error checkmark" : "checkmark"}></span>
                         </label>
                         <span>I agree to be contacted by 'The Ananta Aspire' and agents via WhatsApp, SMS, phone, email etc.</span>
 
                         
                     </p>
-                    {errors.terms && (
-                        <p className="text-red-700 error text-sm">{errors.terms}</p>
-                    )}
+                    <p className={`text-red-400 error text-sm ${errors.terms && "visible"}`}>{errors.terms ? errors.terms : "You must accept the terms"}</p>
 
                     <div className="text-center flex items-center gap-5 justify-end">
                         <input type="submit" value={loading ? "Processing..." : button ? button : 'Download Now'} disabled={loading} className={`submit_btn cursor-pointer`} />
@@ -276,7 +314,7 @@ const EnquireForm = ({ title, setOpen, button, formId }) => {
                 </div>
                 
                 )}
-                {formId && formId === "price" &&
+                {showSide && showSide === true &&
                         <div className="py-2 form-row we_get_row">
                             <p className='form_label'>What You Get</p>
                             <div className='we_get_div_grid'>

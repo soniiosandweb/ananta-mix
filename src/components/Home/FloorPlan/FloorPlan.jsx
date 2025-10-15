@@ -68,7 +68,7 @@ const FloorPlan = () => {
                                                 <p className="floor_text_content">Carpet - 1861 sq.ft.</p>
                                             </div>
                                             <div className="floor_plans_right">
-                                                <Button className="floor_plans_btn" onClick={() => openPriceForm()}>
+                                                <Button className="floor_plans_btn" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")}>
                                                     <img src={openIcon} alt="open" className="open_icon" />
                                                     Explore More
                                                 </Button>
@@ -103,7 +103,7 @@ const FloorPlan = () => {
                                                 <p className="floor_text_content">Carpet - 1868.30 sq.ft.</p>
                                             </div>
                                             <div className="floor_plans_right">
-                                                <Button className="floor_plans_btn" onClick={() => openPriceForm()}>
+                                                <Button className="floor_plans_btn" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")}>
                                                     <img src={openIcon} alt="open" className="open_icon" />
                                                     Explore More
                                                 </Button>
@@ -138,7 +138,7 @@ const FloorPlan = () => {
                                                 <p className="floor_text_content">Carpet - 1064.00 sq.ft.</p>
                                             </div>
                                             <div className="floor_plans_right">
-                                                <Button className="floor_plans_btn" onClick={() => openPriceForm()}>
+                                                <Button className="floor_plans_btn" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")}>
                                                     <img src={openIcon} alt="open" className="open_icon" />
                                                     Explore More
                                                 </Button>
@@ -149,7 +149,7 @@ const FloorPlan = () => {
                                     {/* Pent House */}
                                     <Tab.Pane eventKey="penthouse">
                                         <div className="floor_blans_image">
-                                            <img src={floor4} alt="Luxury penthouse duplex at Ananta Aspire Zirakpur – premium rooftop residence with modern interiors, spacious design, and high-end amenities" className="floor_plan_img" onClick={() => openPriceForm()} />
+                                            <img src={floor4} alt="Luxury penthouse duplex at Ananta Aspire Zirakpur – premium rooftop residence with modern interiors, spacious design, and high-end amenities" className="floor_plan_img" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")} />
                                         </div>
                                         <div className="floor_palns_flex">
                                             <div className="floor_plans_left">
@@ -159,7 +159,7 @@ const FloorPlan = () => {
                                                 <p className="floor_text_content">Carpet - 1861 sq.ft.</p> */}
                                             </div>
                                             <div className="floor_plans_right">
-                                                <Button className="floor_plans_btn" onClick={() => openPriceForm()}>
+                                                <Button className="floor_plans_btn" onClick={() => openPriceForm("Get Complete Project Details", "Share your information to receive all updates on Ananta Aspire’s premium apartments and offers.", "Enquire Now", "request")}>
                                                     <img src={openIcon} alt="open" className="open_icon" />
                                                     Send Request
                                                 </Button>
