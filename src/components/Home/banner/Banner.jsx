@@ -156,7 +156,7 @@ const Banner = () => {
                                                             </div>
                                                         ))}
                                                     </div>
-                                                    <Button className="right_fixed_schedule" onClick={() => openPriceForm("Schedule Your Free Site Visit with Pickup & Drop Service", "Experience Ananta Aspire firsthand. Share your details to book a personalized tour.", "Schedule  Visit", "schedule")}>Schedule a Free Site Visit</Button>
+                                                    <Button className="right_fixed_schedule" onClick={() => openPriceForm("Schedule Your Free Site Visit with Pickup & Drop Service", "Experience Ananta Aspire firsthand. Share your details to book a personalized tour.", "Schedule Visit", "schedule")}>Schedule a Free Site Visit</Button>
                                                 </div>
                                             </div>
                                             {/* <div className="banner_small_image">
@@ -166,12 +166,12 @@ const Banner = () => {
                                         </div>
                                     </Col>
                                 </Row>
-                                <div className="banner_text_gradient"></div>
+                                
                             </Container>
-
+                            
                             
                         </div>
-                        
+                        <div className="banner_text_gradient"></div>
                     </div>
                 ))}
             </Slider>
@@ -180,7 +180,7 @@ const Banner = () => {
                     <div className="price_list_heading_block">
                         <img src={logo} alt="Ananta Aspire Logo" className="form_logo" />
                     </div>
-                    <p className="price_list_heading">Ananta Aspire Exclusive  Price List!</p>
+                    <p className="price_list_heading">Ananta Aspire Exclusive Price List!</p>
                     <p className="price_list_subtext">Complete Overview of Current Prices for All Units to Guide Your Property Investment</p>
                     <EnquireForm formId={"sideFixed"} title="Ultra-Luxurious 3, 3+1, and 4+1 BHK Flats & Penthouses/Duplexes | Starting at ₹ 1.5 Cr*" button="Download Price List" />
                     <div className="py-2 form-row we_get_row">

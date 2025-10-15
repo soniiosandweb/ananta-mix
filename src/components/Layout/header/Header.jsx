@@ -79,14 +79,42 @@ const Header = () => {
     // eslint-disable-next-line
   },[locationValue]);
 
-  const { openPriceForm } = useFormContext();
+  const {
+    openPriceForm,
+    isPriceFormOpen,
+    priceFormOpenedManually,
+    priceFormAutoOpened,
+  } = useFormContext();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     openPriceForm();
-  //   }, 5000);
-  //   // eslint-disable-next-line
-  // }, []);
+  useEffect(() => {
+    const checkAndAutoOpen = () => {
+      if (
+        window.innerWidth < 992 &&
+        !isPriceFormOpen &&
+        !priceFormOpenedManually &&
+        !priceFormAutoOpened
+      ) {
+        openPriceForm(
+          "Ananta Aspire Exclusive Price List!",
+          "Complete Overview of Current Prices for All Units to Guide Your Property Investment",
+          "Download Price List",
+          "sideFixed",
+          true // fromAuto
+        );
+      }
+    };
+
+    // Auto open after 5 seconds
+    const timer = setTimeout(checkAndAutoOpen, 5000);
+
+    // Auto open on resize below 992px
+    window.addEventListener("resize", checkAndAutoOpen);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", checkAndAutoOpen);
+    };
+  }, [isPriceFormOpen, priceFormOpenedManually, priceFormAutoOpened, openPriceForm]);
 
   useEffect(() => {
     const listenScrollEvent = () => {
