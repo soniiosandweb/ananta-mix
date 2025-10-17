@@ -156,7 +156,13 @@ const Banner = () => {
                                                             </div>
                                                         ))}
                                                     </div>
-                                                    <Button className="right_fixed_schedule" onClick={() => openPriceForm("Schedule Your Free Site Visit with Pickup & Drop Service", "Experience Ananta Aspire firsthand. Share your details to book a personalized tour.", "Schedule Visit", "schedule")}>Schedule a Free Site Visit</Button>
+                                                    <Button className="right_fixed_schedule" onClick={() => openPriceForm("Schedule Your Free Site Visit with Pickup & Drop Service", "Experience Ananta Aspire firsthand. Share your details to book a personalized tour.", "Schedule Visit", "schedule")}>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        Schedule a Free Site Visit
+                                                    </Button>
                                                 </div>
                                             </div>
                                             {/* <div className="banner_small_image">
